@@ -1,0 +1,178 @@
+[
+    {
+      "nombre": "New York",
+      "soldados": 4000,
+      "misiles": 3500,
+      "TEChlevel": 8,
+      "caminos": [
+        {
+          "ToVertex": "Houston",
+          "Military": 16,
+          "Goods": 65,
+          "Distance": 600
+        },
+        {
+            "ToVertex": "Denver",
+            "Military": 10,
+            "Goods": 75,
+            "Distance": 450
+        }
+      ]
+    },
+    {
+      "nombre": "Los Angeles",
+      "soldados": 4200,
+      "misiles": 3800,
+      "TEChlevel": 9
+    },
+    {
+      "nombre": "Chicago",
+      "soldados": 3800,
+      "misiles": 3400,
+      "TEChlevel": 7
+    },
+    {
+      "nombre": "San Francisco",
+      "soldados": 3900,
+      "misiles": 3600,
+      "TEChlevel": 8
+    },
+    {
+      "nombre": "Miami",
+      "soldados": 4100,
+      "misiles": 3700,
+      "TEChlevel": 9
+    },
+    {
+      "nombre": "Dallas",
+      "soldados": 4300,
+      "misiles": 3900,
+      "TEChlevel": 10
+    },
+    {
+      "nombre": "Seattle",
+      "soldados": 3800,
+      "misiles": 3400,
+      "TEChlevel": 7
+    },
+    {
+      "nombre": "Denver",
+      "soldados": 3900,
+      "misiles": 3600,
+      "TEChlevel": 8
+    },
+    {
+      "nombre": "Atlanta",
+      "soldados": 4100,
+      "misiles": 3700,
+      "TEChlevel": 9
+    },
+    {
+      "nombre": "Houston",
+      "soldados": 4300,
+      "misiles": 3900,
+      "TEChlevel": 10
+    },
+    {
+      "nombre": "Boston",
+      "soldados": 4000,
+      "misiles": 3500,
+      "TEChlevel": 8
+    },
+    {
+      "nombre": "Phoenix",
+      "soldados": 4200,
+      "misiles": 3800,
+      "TEChlevel": 9
+    },
+    {
+      "nombre": "Philadelphia",
+      "soldados": 3800,
+      "misiles": 3400,
+      "TEChlevel": 7
+    },
+    {
+      "nombre": "Detroit",
+      "soldados": 3900,
+      "misiles": 3600,
+      "TEChlevel": 8
+    },
+    {
+      "nombre": "San Diego",
+      "soldados": 4100,
+      "misiles": 3700,
+      "TEChlevel": 9
+    },
+    {
+      "nombre": "Dallas",
+      "soldados": 4300,
+      "misiles": 3900,
+      "TEChlevel": 10
+    },
+    {
+      "nombre": "Baltimore",
+      "soldados": 3800,
+      "misiles": 3400,
+      "TEChlevel": 7
+    },
+    {
+      "nombre": "Charlotte",
+      "soldados": 3900,
+      "misiles": 3600,
+      "TEChlevel": 8
+    },
+    {
+      "nombre": "Las Vegas",
+      "soldados": 4100,
+      "misiles": 3700,
+      "TEChlevel": 9
+    },
+    {
+      "nombre": "New Orleans",
+      "soldados": 4300,
+      "misiles": 3900,
+      "TEChlevel": 10
+    },
+    {
+      "nombre": "Minneapolis",
+      "soldados": 4000,
+      "misiles": 3500,
+      "TEChlevel": 8
+    },
+    {
+      "nombre": "Portland",
+      "soldados": 4200,
+      "misiles": 3800,
+      "TEChlevel": 9
+    },
+    {
+      "nombre": "St. Louis",
+      "soldados": 3800,
+      "misiles": 3400,
+      "TEChlevel": 7
+    },
+    {
+      "nombre": "Cincinnati",
+      "soldados": 3900,
+      "misiles": 3600,
+      "TEChlevel": 8
+    },
+    {
+      "nombre": "Tampa",
+      "soldados": 4100,
+      "misiles": 3700,
+      "TEChlevel": 9
+    },
+    {
+      "nombre": "Orlando",
+      "soldados": 4300,
+      "misiles": 3900,
+      "TEChlevel": 10
+    },
+    {
+      "nombre": "Pittsburgh",
+      "soldados": 3800,
+      "misiles": 3400,
+      "TEChlevel": 7
+    }
+]

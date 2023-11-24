@@ -1,158 +1,140 @@
 [
-    {
-      "Vertex": "New York",
-      "Soldiers": 4000,
-      "Missiles": 3500,
-      "TechLevel": 8,
-      "Edges": [
-        {
-          "ToVertex": "Atlanta",
-          "Military": 10,
-          "Goods": 50,
-          "Distance": 900
-        },
-        {
-          "ToVertex": "Chicago",
-          "Military": 8,
-          "Goods": 40,
-          "Distance": 1200
-        },
-        {
-          "ToVertex": "Los Angeles",
-          "Military": 12,
-          "Goods": 60,
-          "Distance": 2500
-        }
-      ]
-    },
-    {
-      "Vertex": "Atlanta",
-      "Soldiers": 3000,
-      "Missiles": 2800,
-      "TechLevel": 6,
-      "Edges": [
-        {
-          "ToVertex": "New York",
-          "Military": 10,
-          "Goods": 50,
-          "Distance": 900
-        },
-        {
-          "ToVertex": "Chicago",
-          "Military": 15,
-          "Goods": 30,
-          "Distance": 700
-        },
-        {
-          "ToVertex": "San Francisco",
-          "Military": 18,
-          "Goods": 70,
-          "Distance": 2000
-        }
-      ]
-    },
-    {
-      "Vertex": "Chicago",
-      "Soldiers": 2500,
-      "Missiles": 2000,
-      "TechLevel": 7,
-      "Edges": [
-        {
-          "ToVertex": "New York",
-          "Military": 8,
-          "Goods": 40,
-          "Distance": 1200
-        },
-        {
-          "ToVertex": "Atlanta",
-          "Military": 15,
-          "Goods": 30,
-          "Distance": 700
-        },
-        {
-          "ToVertex": "Denver",
-          "Military": 20,
-          "Goods": 80,
-          "Distance": 1000
-        }
-      ]
-    },
-    {
-      "Vertex": "Los Angeles",
-      "Soldiers": 3500,
-      "Missiles": 3000,
-      "TechLevel": 9,
-      "Edges": [
-        {
-          "ToVertex": "San Francisco",
-          "Military": 12,
-          "Goods": 60,
-          "Distance": 400
-        },
-        {
-          "ToVertex": "Seattle",
-          "Military": 14,
-          "Goods": 75,
-          "Distance": 1100
-        },
-        {
-          "ToVertex": "New York",
-          "Military": 20,
-          "Goods": 90,
-          "Distance": 2500
-        }
-      ]
-    },
-    {
-      "Vertex": "San Francisco",
-      "Soldiers": 3200,
-      "Missiles": 2700,
-      "TechLevel": 8,
-      "Edges": [
-        {
-          "ToVertex": "Los Angeles",
-          "Military": 12,
-          "Goods": 60,
-          "Distance": 400
-        },
-        {
-          "ToVertex": "Seattle",
-          "Military": 16,
-          "Goods": 80,
-          "Distance": 800
-        },
-        {
-          "ToVertex": "Atlanta",
-          "Military": 18,
-          "Goods": 70,
-          "Distance": 2000
-        }
-      ]
-    },
-    {
-      "Vertex": "Denver",
-      "Soldiers": 2800,
-      "Missiles": 2300,
-      "TechLevel": 7,
-      "Edges": [
-        {
-          "ToVertex": "Chicago",
-          "Military": 20,
-          "Goods": 80,
-          "Distance": 1000
-        },
-        {
-          "ToVertex": "Seattle",
-          "Military": 10,
-          "Goods": 45,
-          "Distance": 1200
-        },
-        {
-          "ToVertex": "Los Angeles",
-          "Military": 15,
-          "Goods": 50,
-          "Distance": 1800
-        }
-      ]
-    }
+  {
+    "Nombre": "New York",
+    "Soldados": 4000,
+    "Misiles": 3500,
+    "TEChLevel": 8,
+    "Caminos": [
+      {
+        "Ciudad2": "Atlanta",
+        "Ejercito": 10,
+        "Bienes": 50,
+        "Distancia": 900
+      },
+      {
+        "Ciudad2": "Chicago",
+        "Ejercito": 8,
+        "Bienes": 40,
+        "Distancia": 1200
+      },
+      {
+        "Ciudad2": "Los Angeles",
+        "Ejercito": 12,
+        "Bienes": 60,
+        "Distancia": 2500
+      }
+    ]
+  },
+  {
+    "Nombre": "Atlanta",
+    "Soldados": 3000,
+    "Misiles": 2800,
+    "TEChLevel": 6,
+    "Caminos": [
+      {
+        "Ciudad2": "New York",
+        "Ejercito": 10,
+        "Bienes": 50,
+        "Distancia": 900
+      },
+      {
+        "Ciudad2": "Chicago",
+        "Ejercito": 15,
+        "Bienes": 30,
+        "Distancia": 700
+      },
+      {
+        "Ciudad2": "San Francisco",
+        "Ejercito": 18,
+        "Bienes": 70,
+        "Distancia": 2000
+      }
+    ]
+  },
+  {
+    "Nombre": "Chicago",
+    "Soldados": 2500,
+    "Misiles": 2000,
+    "TEChLevel": 7,
+    "Caminos": [
+      {
+        "Ciudad2": "New York",
+        "Ejercito": 8,
+        "Bienes": 40,
+        "Distancia": 1200
+      },
+      {
+        "Ciudad2": "Atlanta",
+        "Ejercito": 15,
+        "Bienes": 30,
+        "Distancia": 700
+      },
+      {
+        "Ciudad2": "Denver",
+        "Ejercito": 20,
+        "Bienes": 80,
+        "Distancia": 1000
+      }
+    ]
+  },
+  {
+    "Nombre": "Los Angeles",
+    "Soldados": 3500,
+    "Misiles": 3000,
+    "TEChLevel": 9,
+    "Caminos": [
+      {
+        "Ciudad2": "San Francisco",
+        "Ejercito": 12,
+        "Bienes": 60,
+        "Distancia": 400
+      },
+      {
+        "Ciudad2": "New York",
+        "Ejercito": 20,
+        "Bienes": 90,
+        "Distancia": 2500
+      }
+    ]
+  },
+  {
+    "Nombre": "San Francisco",
+    "Soldados": 3200,
+    "Misiles": 2700,
+    "TEChLevel": 8,
+    "Caminos": [
+      {
+        "Ciudad2": "Los Angeles",
+        "Ejercito": 12,
+        "Bienes": 60,
+        "Distancia": 400
+      },
+      {
+        "Ciudad2": "Atlanta",
+        "Ejercito": 18,
+        "Bienes": 70,
+        "Distancia": 2000
+      }
+    ]
+  },
+  {
+    "Nombre": "Denver",
+    "Soldados": 2800,
+    "Misiles": 2300,
+    "TEChLevel": 7,
+    "Caminos": [
+      {
+        "Ciudad2": "Chicago",
+        "Ejercito": 20,
+        "Bienes": 80,
+        "Distancia": 1000
+      },
+      {
+        "Ciudad2": "Los Angeles",
+        "Ejercito": 15,
+        "Bienes": 50,
+        "Distancia": 1800
+      }
+    ]
+  }
 ]

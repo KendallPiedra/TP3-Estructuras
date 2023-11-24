@@ -690,7 +690,7 @@
       "TEChlevel": 9,
       "caminos": [
         {
-            "ciudad2": "Los Angeles",
+            "ciudad2": "New York",
             "ejercito": 80,
             "bienes": 20,
             "distancia": 1200
@@ -702,28 +702,10 @@
             "distancia": 1200
         },
         {
-            "ciudad2": "San Diego",
+            "ciudad2": "Los Angeles",
             "ejercito": 15,
             "bienes": 45,
             "distancia": 600
-        },
-        {
-            "ciudad2": "Miami",
-            "ejercito": 15,
-            "bienes": 45,
-            "distancia": 600
-        },
-        {
-          "ciudad2": "Denver",
-          "ejercito": 15,
-          "bienes": 45,
-          "distancia": 600
-        },
-        {
-          "ciudad2": "Kansas City",
-          "ejercito": 15,
-          "bienes": 45,
-          "distancia": 600
         }
       ]
     },
@@ -731,19 +713,85 @@
       "nombre": "Orlando",
       "soldados": 4300,
       "misiles": 3900,
-      "TEChlevel": 10
+      "TEChlevel": 10,
+      "caminos": [
+        {
+            "ciudad2": "Philadelphia",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "Detroit",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        }
+      ]
     },
     {
       "nombre": "Pittsburgh",
       "soldados": 3800,
       "misiles": 3400,
-      "TEChlevel": 7
+      "TEChlevel": 7,
+      "caminos": [
+        {
+            "ciudad2": "Chicago",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "New Orleans",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "Dallas",
+            "ejercito": 15,
+            "bienes": 45,
+            "distancia": 600
+        },
+        {
+            "ciudad2": "Atlanta",
+            "ejercito": 15,
+            "bienes": 45,
+            "distancia": 600
+        },
+        {
+          "ciudad2": "Miami",
+          "ejercito": 15,
+          "bienes": 45,
+          "distancia": 600
+        }
+      ]
     },
     {
       "nombre": "Sacramento",
       "soldados": 3900,
       "misiles": 3600,
-      "TEChlevel": 8
+      "TEChlevel": 8,
+      "caminos": [
+        {
+            "ciudad2": "St. Louis",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "Charlotte",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "Cincinnati",
+            "ejercito": 15,
+            "bienes": 45,
+            "distancia": 600
+        }
+      ]
     },
     {
       "nombre": "Kansas City",

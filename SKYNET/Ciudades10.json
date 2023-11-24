@@ -1,0 +1,250 @@
+[
+  {
+    "nombre": "New York",
+    "soldados": 4000,
+    "misiles": 3500,
+    "TEChLevel": 8,
+    "caminos": [
+      {
+        "ciudad2": "Atlanta",
+        "ejercito": 10,
+        "bienes": 50,
+        "distancia": 900
+      },
+      {
+        "ciudad2": "Chicago",
+        "ejercito": 8,
+        "bienes": 40,
+        "distancia": 1200
+      }
+    ]
+  },
+  {
+    "nombre": "Atlanta",
+    "soldados": 3000,
+    "misiles": 2800,
+    "TEChLevel": 6,
+    "caminos": [
+      {
+        "ciudad2": "Miami",
+        "ejercito": 10,
+        "bienes": 50,
+        "distancia": 900
+      },
+      {
+        "ciudad2": "Chicago",
+        "ejercito": 15,
+        "bienes": 30,
+        "distancia": 700
+      },
+      {
+        "ciudad2": "New York",
+        "ejercito": 10,
+        "bienes": 50,
+        "distancia": 900
+      }
+    ]
+  },
+  {
+    "nombre": "Chicago",
+    "soldados": 2500,
+    "misiles": 2000,
+    "TEChLevel": 7,
+    "caminos": [
+      {
+        "ciudad2": "Denver",
+        "ejercito": 8,
+        "bienes": 40,
+        "distancia": 1200
+      },
+      {
+        "ciudad2": "Atlanta",
+        "ejercito": 15,
+        "bienes": 30,
+        "distancia": 700
+      },
+      {
+        "ciudad2": "New York",
+        "ejercito": 8,
+        "bienes": 40,
+        "distancia": 1200
+      },
+      {
+        "ciudad2": "San Francisco",
+        "ejercito": 60,
+        "bienes": 8,
+        "distancia": 900
+      }
+    ]
+  },
+  {
+    "nombre": "Los Angeles",
+    "soldados": 3500,
+    "misiles": 3000,
+    "TEChLevel": 9,
+    "caminos": [
+      {
+        "ciudad2": "San Francisco",
+        "ejercito": 12,
+        "bienes": 60,
+        "distancia": 400
+      },
+      {
+        "ciudad2": "Houston",
+        "ejercito": 55,
+        "bienes": 33,
+        "distancia": 700
+      },
+      {
+        "ciudad2": "New Orleans",
+        "ejercito": 90,
+        "bienes": 20,
+        "distancia": 3000
+      }
+    ]
+  },
+  {
+    "nombre": "San Francisco",
+    "soldados": 3200,
+    "misiles": 2700,
+    "TEChLevel": 8,
+    "caminos": [
+      {
+        "ciudad2": "Los Angeles",
+        "ejercito": 12,
+        "bienes": 60,
+        "distancia": 400
+      },
+      {
+        "ciudad2": "Denver",
+        "ejercito": 7,
+        "bienes": 77,
+        "distancia": 777
+      },
+      {
+        "ciudad2": "Chicago",
+        "ejercito": 60,
+        "bienes": 8,
+        "distancia": 900
+      }
+    ]
+  },
+  {
+    "nombre": "Denver",
+    "soldados": 2800,
+    "misiles": 2300,
+    "TEChLevel": 7,
+    "caminos": [
+      {
+        "ciudad2": "Chicago",
+        "ejercito": 20,
+        "bienes": 80,
+        "distancia": 1000
+      },
+      {
+        "ciudad2": "Dallas",
+        "ejercito": 10,
+        "bienes": 75,
+        "distancia": 450
+      },
+      {
+        "ciudad2": "San Francisco",
+        "ejercito": 7,
+        "bienes": 77,
+        "distancia": 777
+      }
+    ]
+  },
+  {
+    "nombre": "Miami",
+    "soldados": 2800,
+    "misiles": 2400,
+    "TEChLevel": 7,
+    "caminos": [
+      {
+        "ciudad2": "Atlanta",
+        "ejercito": 14,
+        "bienes": 70,
+        "distancia": 600
+      },
+      {
+        "ciudad2": "Houston",
+        "ejercito": 25,
+        "bienes": 10,
+        "distancia": 650
+      }
+    ]
+  },
+  {
+    "nombre": "New Orleans",
+    "soldados": 2600,
+    "misiles": 2200,
+    "TEChLevel": 6,
+    "caminos": [
+      {
+        "ciudad2": "Houston",
+        "ejercito": 14,
+        "bienes": 60,
+        "distancia": 400
+      },
+      {
+        "ciudad2": "Los Angeles",
+        "ejercito": 90,
+        "bienes": 20,
+        "distancia": 3000
+      }
+    ]
+  },
+  {
+    "nombre": "Houston",
+    "soldados": 3200,
+    "misiles": 2800,
+    "TEChLevel": 8,
+    "caminos": [
+      {
+        "ciudad2": "New Orleans",
+        "ejercito": 14,
+        "bienes": 60,
+        "distancia": 400
+      },
+      {
+        "ciudad2": "Dalas",
+        "ejercito": 16,
+        "bienes": 65,
+        "distancia": 600
+      },
+      {
+        "ciudad2": "Los Angeles",
+        "ejercito": 55,
+        "bienes": 33,
+        "distancia": 700
+      },
+      {
+        "ciudad2": "Miami",
+        "ejercito": 25,
+        "bienes": 10,
+        "distancia": 650
+      }
+    ]
+  },
+  {
+    "nombre": "Dallas",
+    "soldados": 3000,
+    "misiles": 2600,
+    "TEChLevel": 7,
+    "caminos": [
+      {
+        "ciudad2": "Houston",
+        "ejercito": 16,
+        "bienes": 65,
+        "distancia": 600
+      },
+      {
+        "ciudad2": "Denver",
+        "ejercito": 10,
+        "bienes": 75,
+        "distancia": 450
+      }
+    ]
+  }
+]

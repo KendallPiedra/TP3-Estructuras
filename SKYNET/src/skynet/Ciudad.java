@@ -13,5 +13,56 @@ public class Ciudad {
     String nombre;
     int soldados,misiles,TEChlevel;
     List<Camino> caminitos;
+
+    public Ciudad(String nombre, int soldados, int misiles, int TEChlevel, List<Camino> caminitos) {
+        this.nombre = nombre;
+        this.soldados = soldados;
+        this.misiles = misiles;
+        this.TEChlevel = TEChlevel;
+        this.caminitos = caminitos;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getSoldados() {
+        return soldados;
+    }
+
+    public void setSoldados(int soldados) {
+        this.soldados = soldados;
+    }
+
+    public int getMisiles() {
+        return misiles;
+    }
+
+    public void setMisiles(int misiles) {
+        this.misiles = misiles;
+    }
+
+    public int getTEChlevel() {
+        return TEChlevel;
+    }
+
+    public void setTEChlevel(int TEChlevel) {
+        this.TEChlevel = TEChlevel;
+    }
+
+    public List<Camino> getCaminitos() {
+        return caminitos;
+    }
+
+    public void setCaminitos(List<Camino> caminitos) {
+        this.caminitos = caminitos;
+    }
+    
+    
+    
             
 }

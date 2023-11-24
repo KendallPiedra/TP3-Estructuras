@@ -12,6 +12,28 @@ import java.util.List;
  * @author Usuario
  */
 public class Mapa {
-    List<Caminos> caminos= new ArrayList<>();
-    List<Ciudades> ciudades= new ArrayList<>();
+    List<Camino> caminos= new ArrayList<>();
+    List<Ciudad> ciudades= new ArrayList<>();
+
+    public Mapa() {
+    }
+
+    public List<Camino> getCaminos() {
+        return caminos;
+    }
+
+    public void setCaminos(List<Camino> caminos) {
+        this.caminos = caminos;
+    }
+
+    public List<Ciudad> getCiudades() {
+        return ciudades;
+    }
+
+    public void setCiudades(List<Ciudad> ciudades) {
+        this.ciudades = ciudades;
+    }
+    
+    
+    
 }

@@ -17,7 +17,12 @@ public class SKYNET {
         mapa.generarCiudades("Ciudades6.json");
         
         for(Ciudad ciudad:mapa.ciudades){
-            System.out.println(ciudad.misiles);
+            System.out.println(ciudad.nombre);
+            System.out.println("---------------------CAMINOS-------------------");
+            for(Camino camino:ciudad.caminos){
+                System.out.println(camino.ciudad2);
+            }
+            System.out.println("-----------------------------------------------");
         }
         System.out.println("holaaaaa");
     }

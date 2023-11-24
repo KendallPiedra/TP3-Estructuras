@@ -63,6 +63,9 @@ public class Mapa {
     public void generarCiudades(String nombre) {
         Ciudad[] ciudadesArray = leerJSON(nombre);
 
+        // Limpiar la lista de ciudades antes de agregar las nuevas
+        ciudades.clear();
+
         // Agregar las ciudades al mapa
         for (Ciudad ciudad : ciudadesArray) {
             ciudades.add(ciudad);

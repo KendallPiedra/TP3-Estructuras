@@ -56,7 +56,5 @@ public class Camino {
     public void setDistancia(int distancia) {
         this.distancia = distancia;
     }
-    
-    
-    
+
 }

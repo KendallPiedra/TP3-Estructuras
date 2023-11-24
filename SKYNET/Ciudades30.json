@@ -661,13 +661,71 @@
       "nombre": "Cincinnati",
       "soldados": 3900,
       "misiles": 3600,
-      "TEChlevel": 8
+      "TEChlevel": 8,
+      "caminos": [
+        {
+            "ciudad2": "Sacramento",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "St. Louis",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "Minneapolis",
+            "ejercito": 15,
+            "bienes": 45,
+            "distancia": 600
+        }
+      ]
     },
     {
       "nombre": "Tampa",
       "soldados": 4100,
       "misiles": 3700,
-      "TEChlevel": 9
+      "TEChlevel": 9,
+      "caminos": [
+        {
+            "ciudad2": "Los Angeles",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "San Fransokyo",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "San Diego",
+            "ejercito": 15,
+            "bienes": 45,
+            "distancia": 600
+        },
+        {
+            "ciudad2": "Miami",
+            "ejercito": 15,
+            "bienes": 45,
+            "distancia": 600
+        },
+        {
+          "ciudad2": "Denver",
+          "ejercito": 15,
+          "bienes": 45,
+          "distancia": 600
+        },
+        {
+          "ciudad2": "Kansas City",
+          "ejercito": 15,
+          "bienes": 45,
+          "distancia": 600
+        }
+      ]
     },
     {
       "nombre": "Orlando",

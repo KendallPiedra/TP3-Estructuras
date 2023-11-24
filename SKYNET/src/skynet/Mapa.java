@@ -41,11 +41,10 @@ public class Mapa {
     }
     
     
-    public void leerJSON(String nombre){//"loquesea.json"
-        	
+    public static Ciudad[] leerJSON(String nombre) {
         Gson gson = new Gson();
-        String fichero= "";
-        
+        String fichero = "";
+
         try (BufferedReader br = new BufferedReader(new FileReader(nombre))) {
             String linea;
             while ((linea = br.readLine()) != null) {
@@ -53,11 +52,30 @@ public class Mapa {
             }
 
         } catch (FileNotFoundException ex) {
-            System.out.println(ex.getMessage());
+            System.out.println("Error al abrir el archivo: " + ex.getMessage());
         } catch (IOException ex) {
-            System.out.println(ex.getMessage());
+            System.out.println("Error de lectura del archivo: " + ex.getMessage());
         }
-        
-        Properties properties = gson.fromJson(fichero, Properties.class);
+
+        return gson.fromJson(fichero, Ciudad[].class);
     }
+
+    public void generarCiudades(String nombre) {
+        Ciudad[] ciudadesArray = leerJSON(nombre);
+
+        // Agregar las ciudades al mapa
+        for (Ciudad ciudad : ciudadesArray) {
+            ciudades.add(ciudad);
+        }
+    }
+
+
+    /*
+    public void generarCiudades(String nombre){
+        Gson gson=leerJSON(nombre);
+        
+
+    }
+*/
 }
+

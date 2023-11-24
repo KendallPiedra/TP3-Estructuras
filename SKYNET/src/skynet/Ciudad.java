@@ -11,15 +11,15 @@ import java.util.List;
  */
 public class Ciudad {
     String nombre;
-    int soldados,misiles,TEChlevel;
-    List<Camino> caminitos;
+    int soldados,misiles,TEChLevel;
+    List<Camino> caminos;
 
-    public Ciudad(String nombre, int soldados, int misiles, int TEChlevel, List<Camino> caminitos) {
+    public Ciudad(String nombre, int soldados, int misiles, int TEChLevel, List<Camino> caminitos) {
         this.nombre = nombre;
         this.soldados = soldados;
         this.misiles = misiles;
-        this.TEChlevel = TEChlevel;
-        this.caminitos = caminitos;
+        this.TEChLevel = TEChLevel;
+        this.caminos = caminitos;
     }
 
     public String getNombre() {
@@ -46,20 +46,20 @@ public class Ciudad {
         this.misiles = misiles;
     }
 
-    public int getTEChlevel() {
-        return TEChlevel;
+    public int getTEChLevel() {
+        return TEChLevel;
     }
 
     public void setTEChlevel(int TEChlevel) {
-        this.TEChlevel = TEChlevel;
+        this.TEChLevel = TEChlevel;
     }
 
-    public List<Camino> getCaminitos() {
-        return caminitos;
+    public List<Camino> getCaminos() {
+        return caminos;
     }
 
-    public void setCaminitos(List<Camino> caminitos) {
-        this.caminitos = caminitos;
+    public void setCaminos(List<Camino> caminos) {
+        this.caminos = caminos;
     }
     
     

@@ -4,8 +4,14 @@
  */
 package skynet;
 
+import com.google.gson.Gson;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 /**
  *
@@ -35,5 +41,23 @@ public class Mapa {
     }
     
     
-    
+    public void leerJSON(String nombre){//"loquesea.json"
+        	
+        Gson gson = new Gson();
+        String fichero= "";
+        
+        try (BufferedReader br = new BufferedReader(new FileReader(nombre))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                fichero += linea;
+            }
+
+        } catch (FileNotFoundException ex) {
+            System.out.println(ex.getMessage());
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        
+        Properties properties = gson.fromJson(fichero, Properties.class);
+    }
 }

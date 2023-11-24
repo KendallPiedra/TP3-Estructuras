@@ -6,16 +6,22 @@
       "TEChlevel": 8,
       "caminos": [
         {
-          "ToVertex": "Houston",
-          "Military": 16,
-          "Goods": 65,
-          "Distance": 600
+            "ciudad2": "Tampa",
+            "ejercito": 30,
+            "bienes": 54,
+            "distancia": 900
         },
         {
-            "ToVertex": "Denver",
-            "Military": 10,
-            "Goods": 75,
-            "Distance": 450
+            "ciudad2": "New Orleans",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "Chicago",
+            "ejercito": 15,
+            "bienes": 45,
+            "distancia": 600
         }
       ]
     },
@@ -23,13 +29,59 @@
       "nombre": "Los Angeles",
       "soldados": 4200,
       "misiles": 3800,
-      "TEChlevel": 9
+      "TEChlevel": 9,
+      "caminos": [
+        {
+            "ciudad2": "Tampa",
+            "ejercito": 30,
+            "bienes": 54,
+            "distancia": 900
+        },
+        {
+            "ciudad2": "San Fransisco",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "San Diego",
+            "ejercito": 15,
+            "bienes": 45,
+            "distancia": 600
+        }
+      ]
     },
     {
       "nombre": "Chicago",
       "soldados": 3800,
       "misiles": 3400,
-      "TEChlevel": 7
+      "TEChlevel": 7,
+      "caminos": [
+        {
+            "ciudad2": "New York",
+            "ejercito": 15,
+            "bienes": 45,
+            "distancia": 600
+        },
+        {
+            "ciudad2": "San Fransokyo",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "Pittsburgh",
+            "ejercito": 15,
+            "bienes": 45,
+            "distancia": 600
+        },
+        {
+            "ciudad2": "Miami",
+            "ejercito": 15,
+            "bienes": 45,
+            "distancia": 600
+        }
+      ]
     },
     {
       "nombre": "San Francisco",
@@ -104,7 +156,7 @@
       "TEChlevel": 9
     },
     {
-      "nombre": "Dallas",
+      "nombre": "San Fransokyo",
       "soldados": 4300,
       "misiles": 3900,
       "TEChlevel": 10
@@ -174,5 +226,24 @@
       "soldados": 3800,
       "misiles": 3400,
       "TEChlevel": 7
-    }
+    },
+    {
+        "nombre": "Sacramento",
+        "soldados": 3900,
+        "misiles": 3600,
+        "TEChlevel": 8
+      },
+      {
+        "nombre": "Kansas City",
+        "soldados": 4100,
+        "misiles": 3700,
+        "TEChlevel": 9
+      },
+      {
+        "nombre": "Narnia",
+        "soldados": 4300,
+        "misiles": 3900,
+        "TEChlevel": 10
+      }
+    
 ]

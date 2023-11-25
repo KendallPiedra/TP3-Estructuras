@@ -797,13 +797,59 @@
       "nombre": "Kansas City",
       "soldados": 4100,
       "misiles": 3700,
-      "TEChlevel": 9
+      "TEChlevel": 9,
+      "caminos": [
+        {
+            "ciudad2": "Seattle",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "Philadelphia",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "San Fransisco",
+            "ejercito": 15,
+            "bienes": 45,
+            "distancia": 600
+        }
+      ]
     },
     {
       "nombre": "Narnia",
       "soldados": 4300,
       "misiles": 3900,
-      "TEChlevel": 10
+      "TEChlevel": 10,
+      "caminos": [
+        {
+            "ciudad2": "Phoenix",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "Miami",
+            "ejercito": 80,
+            "bienes": 20,
+            "distancia": 1200
+        },
+        {
+            "ciudad2": "Atlanta",
+            "ejercito": 15,
+            "bienes": 45,
+            "distancia": 600
+        },
+        {
+          "ciudad2": "Boston",
+          "ejercito": 15,
+          "bienes": 45,
+          "distancia": 600
+      }
+      ]
     }
     
 ]

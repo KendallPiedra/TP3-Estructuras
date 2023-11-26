@@ -12,7 +12,6 @@ public class NodoGrafo {
     Ciudad dato;
     ListaAdyacencia lista; 
     NodoGrafo siguiente;
-    boolean visitado;
     
     public NodoGrafo(Ciudad ciudad){
         dato=ciudad;
@@ -47,14 +46,12 @@ public class NodoGrafo {
     public void setSiguiente(NodoGrafo siguiente) {
         this.siguiente = siguiente;
     }
-
-    public boolean isVisitado() {
-        return visitado;
+    
+    
+    public void devisitar(){
+        dato.setVisitado(false);
     }
 
-    public void setVisitado(boolean visitado) {
-        this.visitado = visitado;
-    }
     
     
 }

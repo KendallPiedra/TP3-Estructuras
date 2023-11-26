@@ -13,6 +13,18 @@ public class Ciudad {
     String nombre;
     int soldados,misiles,TEChLevel;
     List<Camino> caminos;
+    boolean visitado;
+
+    
+    public boolean isVisitado() {
+        return visitado;
+    }
+
+    public void setVisitado(boolean visitado) {
+        this.visitado = visitado;
+    }
+    
+
 
     
 

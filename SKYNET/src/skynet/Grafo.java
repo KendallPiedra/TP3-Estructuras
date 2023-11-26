@@ -150,7 +150,13 @@ public class Grafo {
     
     
    //============================================================================    
-    
+    public void limpiarRegistroVisita(){
+        NodoGrafo temp=primero;
+        while (temp!=null){
+            temp.devisitar();
+            temp=temp.siguiente;
+        }
+    }
     
     
     @Override

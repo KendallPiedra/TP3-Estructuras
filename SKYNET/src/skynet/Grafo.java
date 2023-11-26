@@ -131,6 +131,20 @@ public class Grafo {
         return contador;
     }
     
+    private String encontrarRoma(){
+        NodoGrafo temp =primero;
+        int maxCaminos=0;
+        String camino="NO HAY CAMINO";
+        while (temp!=null){
+            if (temp.totalCaminos()>maxCaminos){
+                maxCaminos=temp.totalCaminos();
+                camino= temp.dato.nombre;
+            }
+            temp=temp.siguiente;
+        }
+        return camino;
+    }
+    
     
     
     

@@ -19,4 +19,8 @@ public class NodoGrafo {
         lista=new ListaAdyacencia();
         siguiente=null;
     }
+    
+    public int totalCaminos(){
+        return lista.totalAdyacencias();
+    }
 }

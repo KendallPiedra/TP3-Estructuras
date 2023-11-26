@@ -110,6 +110,16 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
         return listaVecinos;
     }
     
+    public int totalAdyacencias(){
+        Camino temp= primero;
+        int total=0;
+        while(temp!=null){
+            total++;
+            temp=temp.siguiente;
+        }
+        return total;
+    }
+    
     
     @Override
     public String toString(){

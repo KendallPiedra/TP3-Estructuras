@@ -1,6 +1,8 @@
 
 package skynet;
 
+import java.util.List;
+
 /**
  *
  * @author Usuario
@@ -96,6 +98,11 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
             }
         }
     }
+    
+    public List<Ciudad> obtenerVecinos(){
+        List<Ciudad> = new ArrayList<>();
+    }
+    
     
     @Override
     public String toString(){

@@ -88,10 +88,6 @@ public class Mapa {
         }
         return null;
     }
-    
-    public void generarAristasExpansionMinima(){
-        
-    }
 
     public void generarAdyacenciasGrafo(){
         for(Ciudad ciudad: ciudades){
@@ -112,11 +108,9 @@ public class Mapa {
     }
     
     public void generarGrafoExpansionMinima(){
-        grafoExpansionMinima=new Grafo();
-        for(Ciudad ciudad: ciudades){
-            grafo.crearNuevoNodo(ciudad);
-        }
-        generarAristasExpansionMinima();
+        grafoExpansionMinima=grafo;
+        NodoGrafo temp= grafo.primero;
+        
     }
     
     public String extraerCiudadMásCaminos(){
@@ -140,10 +134,7 @@ public class Mapa {
             i++;
         }
     }
-    
-    public void generarGrafoExpansionMinima(){
-        grafoExpansionMinima=grafo;
-    }
+   
     /*
     public void generarCiudades(String nombre){
         Gson gson=leerJSON(nombre);

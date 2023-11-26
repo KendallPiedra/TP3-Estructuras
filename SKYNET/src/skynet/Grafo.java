@@ -10,8 +10,8 @@ import java.util.Stack;
  * @author Usuario
  */
 public class Grafo {
-    private NodoGrafo primero;
-    private NodoGrafo ultimo;
+    public NodoGrafo primero;
+    public NodoGrafo ultimo;
     
     public Grafo(){
         primero=ultimo=null;

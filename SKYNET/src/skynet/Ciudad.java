@@ -13,6 +13,7 @@ public class Ciudad {
     String nombre;
     int soldados,misiles,TEChLevel;
     List<Camino> caminos;
+    
 
     public Ciudad(String nombre, int soldados, int misiles, int TEChLevel, List<Camino> caminitos) {
         this.nombre = nombre;
@@ -60,6 +61,10 @@ public class Ciudad {
 
     public void setCaminos(List<Camino> caminos) {
         this.caminos = caminos;
+    }
+    
+    public boolean comparar(Ciudad otra){
+        return nombre.equals(otra.getNombre());
     }
     
     

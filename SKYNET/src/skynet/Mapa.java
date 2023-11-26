@@ -106,6 +106,28 @@ public class Mapa {
         generarAdyacenciasGrafo();
         
     }
+    
+    public String extraerCiudadMásCaminos(){
+        String ciudadMayor="NINGUNA";
+        int mayorCantCaminos=-1;
+        for(Ciudad ciudad:ciudades){
+            if(ciudad.getCaminos().size()>mayorCantCaminos){
+                mayorCantCaminos=ciudad.getCaminos().size();
+                ciudadMayor=ciudad.getNombre();
+            }
+        }
+        return ciudadMayor;
+    }
+    
+    public void borrarCiudadDelMapa(String nombreCiudad){
+        int i=0;
+        for(Ciudad ciudad:ciudades){
+            if(ciudad.getNombre().equals(nombreCiudad)){
+                ciudades.remove(i);
+            }
+            i++;
+        }
+    }
     /*
     public void generarCiudades(String nombre){
         Gson gson=leerJSON(nombre);

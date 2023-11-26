@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package skynet;
 
 /**
@@ -12,8 +9,14 @@ public class Skynet {
     Mapa mapaReal;
     Mapa mapaSimulacion;
     
+    public Skynet(Mapa _mapaReal){
+        mapaSimulacion=mapaReal=_mapaReal;
+    }
+    
     public void dividirAlMundo(){
-        if(!mapaSimulacion.getGrafo())
+        if(mapaSimulacion.getGrafo().esConexo()){
+            
+        }
     }
     
     

@@ -82,18 +82,23 @@ public class Mapa {
         return null;
     }
 
-    public void generarGrafo(){
-        grafo= new Grafo();
+    public void generarAdyacenciasGrafo(){
         for(Ciudad ciudad: ciudades){
-            grafo.crearNuevoNodo(ciudad);
             for (Camino camino:ciudad.caminos){
                 if (buscarCiudad(camino.ciudad2)!=null){
                     grafo.annadirNuevaArista(ciudad, 
                         buscarCiudad(camino.ciudad2), camino.ejercito, camino.bienes, camino.distancia);
                 }
-                
             }
         }
+    }
+    public void generarGrafo(){
+        grafo= new Grafo();
+        for(Ciudad ciudad: ciudades){
+            grafo.crearNuevoNodo(ciudad);
+        }
+        generarAdyacenciasGrafo();
+        
     }
     /*
     public void generarCiudades(String nombre){

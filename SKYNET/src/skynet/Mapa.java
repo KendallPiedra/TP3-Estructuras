@@ -103,7 +103,7 @@ public class Mapa {
     public void generarAristasGrafoExpansionMinima(){
         for(Ciudad ciudad: ciudades){
             for (Camino camino:ciudad.caminos){
-                if (buscarCiudad(camino.ciudad2)!=null && !ciudad.visitado && !buscarCiudad(camino.ciudad2).visitado){
+                if (buscarCiudad(camino.ciudad2)!=null && !buscarCiudad(camino.ciudad2).visitado){
                     grafo.annadirNuevaArista(ciudad, 
                         buscarCiudad(camino.ciudad2), camino.ejercito, camino.bienes, camino.distancia);
                 }
@@ -124,6 +124,7 @@ public class Mapa {
         for(Ciudad ciudad: ciudades){
             grafo.crearNuevoNodo(ciudad);
         }
+        generarAristasGrafoExpansionMinima();
     }
     
     public String extraerCiudadMásCaminos(){

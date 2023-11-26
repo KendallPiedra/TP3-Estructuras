@@ -74,4 +74,15 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
         return actual!=null;
         
     }
+    
+    @Override
+    public String toString(){
+        String cadena="";
+        Camino temporal= primero;
+        while (temporal !=null){
+            cadena=cadena+temporal.destino.getNombre()+" ; ";
+            temporal = temporal.siguiente;
+        }
+        return cadena;
+    }
 }

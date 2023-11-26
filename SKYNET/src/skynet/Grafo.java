@@ -79,5 +79,15 @@ public class Grafo {
         }
     }
     
-    
+    @Override
+    public String toString(){
+        String cadena="";
+        NodoGrafo temporal= primero;
+        while(temporal!=null){
+            cadena = cadena + temporal.dato.getNombre()+" -> "+temporal.lista.toString()+"\n";
+            temporal=temporal.siguiente;
+        }
+        return cadena;
+    }
+     
 }

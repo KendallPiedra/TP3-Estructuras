@@ -10,6 +10,7 @@ import java.util.List;
  * @author Usuario
  */
 public class Ciudad {
+    NodoGrafo nodo;
     String nombre;
     int soldados,misiles,TEChLevel;
     List<Camino> caminos;
@@ -34,7 +35,17 @@ public class Ciudad {
         this.misiles = misiles;
         this.TEChLevel = TEChLevel;
         this.caminos = caminitos;
+        nodo=null;
     }
+
+    public NodoGrafo getNodo() {
+        return nodo;
+    }
+
+    public void setNodo(NodoGrafo nodo) {
+        this.nodo = nodo;
+    }
+    
 
     public String getNombre() {
         return nombre;
@@ -80,7 +91,7 @@ public class Ciudad {
         return nombre.equals(otra.getNombre());
     }
     
-    
+
     
             
 }

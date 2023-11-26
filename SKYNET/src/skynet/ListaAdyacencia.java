@@ -134,4 +134,13 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
     
     
     
+    public void agragarCaminosVuelta(Ciudad ciudad){
+        Camino temp=primero;
+        while(temp!=null){
+            temp.destino.nodo.lista.nuevaAdyacencia(ciudad, temp.ejercito, temp.bienes, temp.distancia);
+        }
+    }
+    
+    
+    
 }

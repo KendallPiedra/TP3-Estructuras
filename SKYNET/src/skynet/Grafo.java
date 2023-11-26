@@ -4,6 +4,9 @@
  */
 package skynet;
 
+import java.util.HashSet;
+import java.util.Stack;
+
 /**
  *
  * @author Usuario
@@ -78,7 +81,64 @@ public class Grafo {
             }
         }
     }
+   //============================================================================ 
+
+    public boolean esConexo() {
+        if (estaVacio()) {
+            // Grafo vacío, considerado conexo por definición.
+            return true;
+        }
+
+        HashSet<Ciudad> visitados = new HashSet<>();
+        Stack<NodoGrafo> stack = new Stack<>();
+
+        // Empezamos desde el primer nodo del grafo
+        stack.push(primero);
+
+        while (!stack.isEmpty()) {
+            NodoGrafo actual = stack.pop();
+            if (!visitados.contains(actual.dato)) {
+                visitados.add(actual.dato);
+                // Agregar todos los vecinos no visitados a la pila
+                for (Ciudad vecino : actual.lista.obtenerVecinos()) {
+                    NodoGrafo vecinoNodo = obtenerNodoPorCiudad(vecino);
+                    if (!visitados.contains(vecino) && vecinoNodo != null) {
+                        stack.push(vecinoNodo);
+                    }
+                }
+            }
+        }
+
+        // El grafo es conexo si todos los vértices fueron visitados
+        return visitados.size() == obtenerNumeroVertices();
+    }
+
+    private NodoGrafo obtenerNodoPorCiudad(Ciudad ciudad) {
+        NodoGrafo temporal = primero;
+        while (temporal != null) {
+            if (temporal.dato.equals(ciudad)) {
+                return temporal;
+            }
+            temporal = temporal.siguiente;
+        }
+        return null;
+    }
+
+    private int obtenerNumeroVertices() {
+        int contador = 0;
+        NodoGrafo temporal = primero;
+        while (temporal != null) {
+            contador++;
+            temporal = temporal.siguiente;
+        }
+        return contador;
+    }
     
+    
+    
+    
+    
+   //============================================================================    
     @Override
     public String toString(){
         String cadena="";

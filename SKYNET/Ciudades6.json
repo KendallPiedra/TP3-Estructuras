@@ -94,6 +94,12 @@
         "ejercito": 20,
         "bienes": 90,
         "distancia": 2500
+      },
+      {
+        "ciudad2": "Denver",
+        "ejercito": 15,
+        "bienes": 50,
+        "distancia": 1800
       }
     ]
   },

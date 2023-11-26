@@ -131,7 +131,8 @@ public class Mapa {
     }
     
     public void generarGrafoExpansionMinimaBienes(){
-        
+        grafoExpansionMinima= new Grafo();
+        grafoExpansionMinima.crearNuevoNodo(grafo.primero.dato);
     }
     
     public String extraerCiudadMásCaminos(){

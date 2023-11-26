@@ -101,8 +101,13 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
     }
     
     public List<Ciudad> obtenerVecinos(){
-        List<Ciudad> = new ArrayList<>();
-        
+        List<Ciudad> listaVecinos= new ArrayList<>();
+        Camino temp=primero;
+        while(temp!=null){
+            listaVecinos.add(temp.destino);
+            temp=temp.siguiente;
+        }
+        return listaVecinos;
     }
     
     

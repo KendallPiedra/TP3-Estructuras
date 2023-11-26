@@ -9,12 +9,11 @@ package skynet;
  * @author Usuario
  */
 public class Skynet {
-    Mapa mapa;
-    
-    
+    Mapa mapaReal;
+    Mapa mapaSimulacion;
     
     public void dividirAlMundo(){
-        
+        if(!mapaSimulacion.getGrafo())
     }
     
     

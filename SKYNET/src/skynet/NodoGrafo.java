@@ -23,4 +23,38 @@ public class NodoGrafo {
     public int totalCaminos(){
         return lista.totalAdyacencias();
     }
+
+    public Ciudad getDato() {
+        return dato;
+    }
+
+    public void setDato(Ciudad dato) {
+        this.dato = dato;
+    }
+
+    public ListaAdyacencia getLista() {
+        return lista;
+    }
+
+    public void setLista(ListaAdyacencia lista) {
+        this.lista = lista;
+    }
+
+    public NodoGrafo getSiguiente() {
+        return siguiente;
+    }
+
+    public void setSiguiente(NodoGrafo siguiente) {
+        this.siguiente = siguiente;
+    }
+
+    public boolean isVisitado() {
+        return visitado;
+    }
+
+    public void setVisitado(boolean visitado) {
+        this.visitado = visitado;
+    }
+    
+    
 }

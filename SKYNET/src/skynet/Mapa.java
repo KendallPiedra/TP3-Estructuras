@@ -18,6 +18,7 @@ public class Mapa {
     List<Camino> caminos= new ArrayList<>();
     List<Ciudad> ciudades= new ArrayList<>();
     Grafo grafo;
+    Grafo grafoExpansionMinima;
 
     public Grafo getGrafo() {
         return grafo;
@@ -104,7 +105,6 @@ public class Mapa {
             grafo.crearNuevoNodo(ciudad);
         }
         generarAdyacenciasGrafo();
-        
     }
     
     public String extraerCiudadMásCaminos(){
@@ -127,6 +127,10 @@ public class Mapa {
             }
             i++;
         }
+    }
+    
+    public void generarGrafoExpansionMinima(){
+        grafoExpansionMinima=grafo;
     }
     /*
     public void generarCiudades(String nombre){

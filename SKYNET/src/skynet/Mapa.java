@@ -20,7 +20,8 @@ import java.util.Properties;
 public class Mapa {
     List<Camino> caminos= new ArrayList<>();
     List<Ciudad> ciudades= new ArrayList<>();
-
+    Grafo grafo;
+    
     public Mapa() {
     }
 
@@ -72,7 +73,28 @@ public class Mapa {
         }
     }
 
+    public Ciudad buscarCiudad(String sCiudad){
+        for (Ciudad ciudad: ciudades){
+            if(ciudad.nombre.equals(sCiudad)){
+                return ciudad;
+            }
+        }
+        return null;
+    }
 
+    public void generarGrafo(){
+        grafo= new Grafo();
+        for(Ciudad ciudad: ciudades){
+            grafo.crearNuevoNodo(ciudad);
+            for (Camino camino:ciudad.caminos){
+                if (buscarCiudad(camino.ciudad2)!=null){
+                    grafo.annadirNuevaArista(ciudad, 
+                        buscarCiudad(camino.ciudad2), camino.ejercito, camino.bienes, camino.distancia);
+                }
+                
+            }
+        }
+    }
     /*
     public void generarCiudades(String nombre){
         Gson gson=leerJSON(nombre);

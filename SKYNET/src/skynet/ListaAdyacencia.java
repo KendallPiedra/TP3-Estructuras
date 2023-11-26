@@ -74,6 +74,31 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
         return actual!=null;
         
     }
+    public void eliminarAdyacencia(Ciudad destino) {
+        if (listaVacia()) {
+            return;
+        }
+
+        if (primero.destino.equals(destino)) {
+            primero = primero.siguiente;
+            if (primero == null) {
+                ultimo = null;
+            }
+            return;
+        }
+
+        Camino actual = primero;
+        while (actual.siguiente != null && !actual.siguiente.destino.comparar(destino)) {
+            actual = actual.siguiente;
+        }
+
+        if (actual.siguiente != null) {
+            actual.siguiente = actual.siguiente.siguiente;
+            if (actual.siguiente == null) {
+                ultimo = actual;
+            }
+        }
+    }
     
     @Override
     public String toString(){
@@ -85,4 +110,7 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
         }
         return cadena;
     }
+    
+    
+    
 }

@@ -269,9 +269,9 @@
         },
         {
             "ciudad2": "Pittsburgh",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 90,
+            "bienes": 15,
+            "distancia": 400
         },
         {
             "ciudad2": "Houston",
@@ -567,9 +567,9 @@
         },
         {
             "ciudad2": "Pittsburgh",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 30,
+            "bienes": 66,
+            "distancia": 1000
         },
         {
             "ciudad2": "Dallas",
@@ -743,9 +743,9 @@
         },
         {
             "ciudad2": "New Orleans",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 30,
+            "bienes": 66,
+            "distancia": 1000
         },
         {
             "ciudad2": "Dallas",
@@ -755,9 +755,9 @@
         },
         {
             "ciudad2": "Atlanta",
-            "ejercito": 15,
-            "bienes": 45,
-            "distancia": 600
+            "ejercito": 90,
+            "bienes": 15,
+            "distancia": 400
         },
         {
           "ciudad2": "Miami",

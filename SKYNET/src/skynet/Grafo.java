@@ -1,9 +1,8 @@
 
 package skynet;
 
-import java.util.Comparator;
 import java.util.HashSet;
-import java.util.PriorityQueue;
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -145,38 +144,6 @@ public class Grafo {
             temp=temp.siguiente;
         }
         return camino;
-    }
-    
-    public Grafo obtenerArbolExpansionMinima() {
-        Grafo arbolExpansion = new Grafo();
-
-        if (!estaVacio()) {
-            HashSet<Ciudad> visitados = new HashSet<>();
-            PriorityQueue<Camino> colaPrioridad = new PriorityQueue<>(Comparator.comparingInt(a -> a.distancia));
-
-            // Empezar desde el primer nodo
-            visitados.add(primero.dato);
-            colaPrioridad.addAll(primero.lista.obtenerAristas());
-
-            while (!colaPrioridad.isEmpty()) {
-                Arista aristaActual = colaPrioridad.poll();
-                Ciudad origen = aristaActual.origen;
-                Ciudad destino = aristaActual.destino;
-
-                if (!visitados.contains(destino)) {
-                    // Agregar arista al árbol de expansión mínima
-                    arbolExpansion.crearNuevoNodo(origen);
-                    arbolExpansion.crearNuevoNodo(destino);
-                    arbolExpansion.annadirNuevaArista(origen, destino, aristaActual.ejercito, aristaActual.bienes, aristaActual.distancia);
-
-                    // Marcar el vértice como visitado y agregar aristas adyacentes a la cola de prioridad
-                    visitados.add(destino);
-                    colaPrioridad.addAll(obtenerNodoPorCiudad(destino).lista.obtenerAristas());
-                }
-            }
-        }
-
-        return arbolExpansion;
     }
     
     

@@ -14,7 +14,7 @@ public class Main {
         // TODO code application logic here
         
         Mapa mapa=new Mapa();
-        mapa.generarCiudades("Ciudades10.json");
+        mapa.generarCiudades("Ciudades6.json");
         
         for(Ciudad ciudad:mapa.ciudades){
             System.out.println(ciudad.nombre);
@@ -24,7 +24,11 @@ public class Main {
             }
             System.out.println("-----------------------------------------------");
         }
-        System.out.println("holaaaaa");
+        System.out.println("=================================================");
+        mapa.generarGrafo();
+        System.out.println(mapa.grafo.toString());
     }
+    
+    
     
 }

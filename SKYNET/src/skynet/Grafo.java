@@ -78,6 +78,7 @@ public class Grafo {
             }
         }
     }
+    
    //============================================================================ 
 
     public boolean esConexo() {
@@ -110,7 +111,7 @@ public class Grafo {
         return visitados.size() == obtenerNumeroVertices();
     }
 
-    private NodoGrafo obtenerNodoPorCiudad(Ciudad ciudad) {
+    public NodoGrafo obtenerNodoPorCiudad(Ciudad ciudad) {
         NodoGrafo temporal = primero;
         while (temporal != null) {
             if (temporal.dato.equals(ciudad)) {
@@ -121,7 +122,7 @@ public class Grafo {
         return null;
     }
 
-    private int obtenerNumeroVertices() {
+    public int obtenerNumeroVertices() {
         int contador = 0;
         NodoGrafo temporal = primero;
         while (temporal != null) {
@@ -131,7 +132,7 @@ public class Grafo {
         return contador;
     }
     
-    private String encontrarRoma(){
+    public String encontrarRoma(){
         NodoGrafo temp =primero;
         int maxCaminos=0;
         String camino="NO HAY CAMINO";
@@ -150,6 +151,9 @@ public class Grafo {
     
     
    //============================================================================    
+    
+    
+    
     @Override
     public String toString(){
         String cadena="";

@@ -127,6 +127,7 @@ public class Mapa {
             grafoExpansionMinima.crearNuevoNodo(ciudad);
         }
         generarAristasGrafoExpansionMinima();
+        grafoExpansionMinima.generarCaminosVuelta();
     }
     
     public void generarGrafoExpansionMinimaBienes(){
@@ -150,11 +151,14 @@ public class Mapa {
         int i=0;
         for(Ciudad ciudad:ciudades){
             if(ciudad.getNombre().equals(nombreCiudad)){
-                ciudades.remove(i);
+                break;
             }
             i++;
         }
+        ciudades.remove(i);
+        generarGrafo();
     }
+    
    
     /*
     public void generarCiudades(String nombre){

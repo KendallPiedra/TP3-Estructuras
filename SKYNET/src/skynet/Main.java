@@ -14,7 +14,7 @@ public class Main {
         // TODO code application logic here
         
         Mapa mapa=new Mapa();
-        mapa.generarCiudades("Ciudades6.json");
+        mapa.generarCiudades("Ciudades10.json");
         
         for(Ciudad ciudad:mapa.ciudades){
             System.out.println(ciudad.nombre);
@@ -24,13 +24,24 @@ public class Main {
             }
             System.out.println("-----------------------------------------------");
         }
-        System.out.println("=================================================");
         mapa.generarGrafo();
+
+        /*
+        System.out.println("=================================================");
         System.out.println(mapa.grafo.toString());
         mapa.generarGrafoExpansionMinima();
         System.out.println("=================================================");
         System.out.println(mapa.grafoExpansionMinima.toString());
         System.out.println(mapa.grafo.esConexo());
+        */
+        Skynet SKINEY=new Skynet(mapa);
+        System.out.println(SKINEY.mapaReal.grafo.toString());
+        System.out.println("=================================================");
+        SKINEY.dividirAlMundo();
+        System.out.println(SKINEY.mapaReal.grafo.toString());
+        
+        
+        
     }
     
     

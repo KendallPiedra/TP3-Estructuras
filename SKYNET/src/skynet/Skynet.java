@@ -14,8 +14,8 @@ public class Skynet {
     }
     
     public void dividirAlMundo(){
-        if(mapaSimulacion.getGrafo().esConexo()){
-            
+        while(mapaSimulacion.getGrafo().esConexo()){
+            mapaReal.borrarCiudadDelMapa(mapaReal.extraerCiudadMásCaminos());
         }
     }
     

@@ -138,6 +138,7 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
         Camino temp=primero;
         while(temp!=null){
             temp.destino.nodo.lista.nuevaAdyacencia(ciudad, temp.ejercito, temp.bienes, temp.distancia);
+            temp=temp.siguiente;
         }
     }
     

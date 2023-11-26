@@ -12,6 +12,7 @@ public class NodoGrafo {
     Ciudad dato;
     ListaAdyacencia lista; 
     NodoGrafo siguiente;
+    boolean visitado;
     
     public NodoGrafo(Ciudad ciudad){
         dato=ciudad;

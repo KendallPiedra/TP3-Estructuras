@@ -21,6 +21,15 @@ public class Mapa {
     List<Camino> caminos= new ArrayList<>();
     List<Ciudad> ciudades= new ArrayList<>();
     Grafo grafo;
+
+    public Grafo getGrafo() {
+        return grafo;
+    }
+
+    public void setGrafo(Grafo grafo) {
+        this.grafo = grafo;
+    }
+    
     
     public Mapa() {
     }

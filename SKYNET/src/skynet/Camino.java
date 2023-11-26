@@ -6,6 +6,7 @@ package skynet;
  * @author krisc
  */
 public class Camino { //(ARCOS)
+    
     String ciudad2;
     Ciudad destino;
     Camino siguiente;
@@ -64,5 +65,7 @@ public class Camino { //(ARCOS)
     public void setDistancia(int distancia) {
         this.distancia = distancia;
     }
+    
+
 
 }

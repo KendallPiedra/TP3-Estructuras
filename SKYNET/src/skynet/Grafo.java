@@ -149,6 +149,8 @@ public class Grafo {
     
     
     
+    
+    
    //============================================================================    
     public void limpiarRegistroVisita(){
         NodoGrafo temp=primero;
@@ -158,6 +160,14 @@ public class Grafo {
         }
     }
     
+    
+    public void generarCaminosVuelta(){
+        NodoGrafo temp= primero;
+        while(temp!=null){
+            temp.agregarCaminosVuelta();
+            temp=temp.siguiente;
+        }
+    }
     
     @Override
     public String toString(){

@@ -14,6 +14,7 @@ public class NodoGrafo {
         dato=ciudad;
         lista=new ListaAdyacencia();
         siguiente=null;
+        ciudad.setNodo(this);
     }
     
     public int totalCaminos(){
@@ -47,6 +48,10 @@ public class NodoGrafo {
     
     public void devisitar(){
         dato.setVisitado(false);
+    }
+    
+    public void agregarCaminosVuelta(){
+        lista.agragarCaminosVuelta(dato);
     }
 
     

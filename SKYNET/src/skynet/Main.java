@@ -27,6 +27,7 @@ public class Main {
         System.out.println("=================================================");
         mapa.generarGrafo();
         System.out.println(mapa.grafo.toString());
+        System.out.println(mapa.grafo.esConexo());
     }
     
     

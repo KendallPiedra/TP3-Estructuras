@@ -379,9 +379,9 @@
         },
         {
             "ciudad2": "Orlando",
-            "ejercito": 15,
-            "bienes": 45,
-            "distancia": 600
+            "ejercito": 50,
+            "bienes": 20,
+            "distancia": 400
         }
       ]
     },
@@ -399,9 +399,9 @@
         },
         {
             "ciudad2": "Orlando",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 30,
+            "bienes": 80,
+            "distancia": 100
         },
         {
             "ciudad2": "Baltimore",
@@ -439,9 +439,9 @@
       "caminos": [
         {
             "ciudad2": "Tampa",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 12,
+            "bienes": 60,
+            "distancia": 600
         },
         {
             "ciudad2": "San Fransisco",
@@ -697,9 +697,9 @@
         },
         {
             "ciudad2": "San Fransokyo",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 12,
+            "bienes": 60,
+            "distancia": 600
         },
         {
             "ciudad2": "Los Angeles",
@@ -717,15 +717,15 @@
       "caminos": [
         {
             "ciudad2": "Philadelphia",
-            "ejercito": 80,
+            "ejercito": 50,
             "bienes": 20,
-            "distancia": 1200
+            "distancia": 400
         },
         {
             "ciudad2": "Detroit",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 30,
+            "bienes": 80,
+            "distancia": 100
         }
       ]
     },

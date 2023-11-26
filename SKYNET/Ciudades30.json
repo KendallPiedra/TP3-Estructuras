@@ -601,7 +601,7 @@
             "ciudad2": "Cincinnati",
             "ejercito": 15,
             "bienes": 45,
-            "distancia": 600
+            "distancia": 900
         }
       ]
     },
@@ -651,9 +651,9 @@
         },
         {
             "ciudad2": "Cincinnati",
-            "ejercito": 15,
-            "bienes": 45,
-            "distancia": 600
+            "ejercito": 50,
+            "bienes": 33,
+            "distancia": 500
         }
       ]
     },
@@ -671,15 +671,15 @@
         },
         {
             "ciudad2": "St. Louis",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 50,
+            "bienes": 33,
+            "distancia": 500
         },
         {
             "ciudad2": "Minneapolis",
             "ejercito": 15,
             "bienes": 45,
-            "distancia": 600
+            "distancia": 900
         }
       ]
     },

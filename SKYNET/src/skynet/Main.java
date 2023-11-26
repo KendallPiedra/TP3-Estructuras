@@ -5,7 +5,7 @@ package skynet;
  *
  * @author Usuario
  */
-public class SKYNET {
+public class Main {
 
     /**
      * @param args the command line arguments
@@ -14,7 +14,7 @@ public class SKYNET {
         // TODO code application logic here
         
         Mapa mapa=new Mapa();
-        mapa.generarCiudades("Ciudades6.json");
+        mapa.generarCiudades("Ciudades10.json");
         
         for(Ciudad ciudad:mapa.ciudades){
             System.out.println(ciudad.nombre);

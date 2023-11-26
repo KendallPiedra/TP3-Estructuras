@@ -5,24 +5,32 @@ package skynet;
  *
  * @author krisc
  */
-public class Camino {
-    String ciudad1, ciudad2;
+public class Camino { //(ARCOS)
+    String ciudad2;
+    Ciudad destino;
+    Camino siguiente;
     int ejercito, bienes, distancia;
 
-    public Camino(String ciudad1, String ciudad2, int ejercito, int bienes, int distancia) {
-        this.ciudad1 = ciudad1;
+    public Camino(String ciudad2, int ejercito, int bienes, int distancia) {
         this.ciudad2 = ciudad2;
         this.ejercito = ejercito;
         this.bienes = bienes;
         this.distancia = distancia;
+        this.destino=null;
+        this.siguiente=null;
     }
-
-    public String getCiudad1() {
-        return ciudad1;
+    public Camino(Ciudad destino, int ejercito, int bienes, int distancia) {
+        this.destino = destino;
+        this.ejercito = ejercito;
+        this.bienes = bienes;
+        this.distancia = distancia;
+        this.siguiente=null;
     }
-
-    public void setCiudad1(String ciudad1) {
-        this.ciudad1 = ciudad1;
+    
+    public Camino(Ciudad destino){
+        this.destino= destino;
+        ejercito=bienes=distancia=0;
+        this.siguiente=null;
     }
 
     public String getCiudad2() {

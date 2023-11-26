@@ -263,9 +263,9 @@
       "caminos": [
         {
             "ciudad2": "Narnia",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 85,
+            "bienes": 40,
+            "distancia": 270
         },
         {
             "ciudad2": "Pittsburgh",
@@ -321,9 +321,9 @@
         },
         {
             "ciudad2": "Narnia",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 10,
+            "bienes": 80,
+            "distancia": 900
         },
         {
             "ciudad2": "Phoenix",
@@ -347,8 +347,8 @@
         },
         {
             "ciudad2": "Narnia",
-            "ejercito": 80,
-            "bienes": 20,
+            "ejercito": 50,
+            "bienes": 40,
             "distancia": 1200
         },
         {
@@ -369,7 +369,7 @@
             "ciudad2": "Kansas City",
             "ejercito": 80,
             "bienes": 20,
-            "distancia": 1200
+            "distancia": 600
         },
         {
             "ciudad2": "Detroit",
@@ -477,9 +477,9 @@
         },
         {
             "ciudad2": "Charlotte",
-            "ejercito": 15,
-            "bienes": 45,
-            "distancia": 600
+            "ejercito": 80,
+            "bienes": 35,
+            "distancia": 1100
         },
         {
             "ciudad2": "Minneapolis",
@@ -593,9 +593,9 @@
         },
         {
             "ciudad2": "Charlotte",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 70,
+            "bienes": 45,
+            "distancia": 850
         },
         {
             "ciudad2": "Cincinnati",
@@ -619,9 +619,9 @@
         },
         {
             "ciudad2": "Charlotte",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 20,
+            "bienes": 5,
+            "distancia": 400
         },
         {
             "ciudad2": "St. Louis",
@@ -645,9 +645,9 @@
         },
         {
             "ciudad2": "Sacramento",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 20,
+            "bienes": 65,
+            "distancia": 1800
         },
         {
             "ciudad2": "Cincinnati",
@@ -665,9 +665,9 @@
       "caminos": [
         {
             "ciudad2": "Sacramento",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 45,
+            "bienes": 80,
+            "distancia": 200
         },
         {
             "ciudad2": "St. Louis",
@@ -775,21 +775,21 @@
       "caminos": [
         {
             "ciudad2": "St. Louis",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 20,
+            "bienes": 65,
+            "distancia": 1800
         },
         {
             "ciudad2": "Charlotte",
-            "ejercito": 80,
-            "bienes": 20,
-            "distancia": 1200
+            "ejercito": 65,
+            "bienes": 30,
+            "distancia": 500
         },
         {
             "ciudad2": "Cincinnati",
-            "ejercito": 15,
-            "bienes": 45,
-            "distancia": 600
+            "ejercito": 45,
+            "bienes": 80,
+            "distancia": 200
         }
       ]
     },
@@ -809,7 +809,7 @@
             "ciudad2": "Philadelphia",
             "ejercito": 80,
             "bienes": 20,
-            "distancia": 1200
+            "distancia": 600
         },
         {
             "ciudad2": "San Fransisco",
@@ -827,8 +827,8 @@
       "caminos": [
         {
             "ciudad2": "Phoenix",
-            "ejercito": 80,
-            "bienes": 20,
+            "ejercito": 50,
+            "bienes": 40,
             "distancia": 1200
         },
         {
@@ -839,15 +839,15 @@
         },
         {
             "ciudad2": "Atlanta",
-            "ejercito": 15,
-            "bienes": 45,
-            "distancia": 600
+            "ejercito": 85,
+            "bienes": 40,
+            "distancia": 270
         },
         {
           "ciudad2": "Boston",
-          "ejercito": 15,
-          "bienes": 45,
-          "distancia": 600
+          "ejercito": 10,
+          "bienes": 80,
+          "distancia": 900
       }
       ]
     }

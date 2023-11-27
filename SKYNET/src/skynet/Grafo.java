@@ -171,14 +171,9 @@ public class Grafo {
             Camino caminoTemp=temp.lista.primero;
             while(caminoTemp!=null){
                 if(camino.origen.nombre.equals(caminoTemp.origen.nombre)&&camino.destino.nombre.equals(caminoTemp.destino.nombre)){
-<<<<<<< Updated upstream
                     temp.lista.eliminarAdyacencia(camino.destino);
-                    
-=======
-                    caminoTemp.origen.nodo.lista.eliminarAdyacencia(caminoTemp.destino);
                     borrado=true;
                     break;
->>>>>>> Stashed changes
                 }
                 caminoTemp= caminoTemp.siguiente;
             }

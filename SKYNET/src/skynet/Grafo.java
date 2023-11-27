@@ -165,27 +165,6 @@ public class Grafo {
     }
     
     public void eliminarCamino(Camino camino){
-        boolean borrado=false;
-        NodoGrafo temp=primero;
-        while(temp!=null){
-            Camino caminoTemp=temp.lista.primero;
-            while(caminoTemp!=null){
-                if(camino.origen.nombre.equals(caminoTemp.origen.nombre)&&camino.destino.nombre.equals(caminoTemp.destino.nombre)){
-                    temp.lista.eliminarAdyacencia(camino.destino);
-                    borrado=true;
-                    break;
-                }
-                caminoTemp= caminoTemp.siguiente;
-            }
-            if(borrado){
-                break;
-            }
-            temp=temp.siguiente;
-        }
-    }
-    
-    
-    public void eliminarCamino2(Camino camino){
        NodoGrafo temp=primero;
        while(temp.dato!=camino.origen){
            temp=temp.siguiente;

@@ -35,11 +35,6 @@ public class Grafo {
         return false;
     }
     
-    public int contarConexiones(){
-        
-        return 0;
-    }
-    
     public void annadirNuevaArista(Ciudad origen, Ciudad destino, int ejercito, int bienes, int distancia){
         if(existeVertice(origen)&&existeVertice(destino)){
             NodoGrafo posicion=primero;
@@ -89,7 +84,33 @@ public class Grafo {
     }
     
    //============================================================================ 
-
+    public List<Camino> extraerTodosLosCaminos(){
+        List<Camino> listaCaminos=new ArrayList<>();
+        NodoGrafo temp=primero;
+        while(temp!=null){
+            Camino caminoTemp=temp.lista.primero;
+            while(caminoTemp!=null){
+                listaCaminos.add(caminoTemp);
+                caminoTemp= caminoTemp.siguiente;
+            }
+            temp=temp.siguiente;
+        }
+        return listaCaminos;
+    }
+    
+    public int contarConexionesEnGrafoDirigido(){
+        int cantCaminos=0;
+        NodoGrafo tmp=primero;
+        
+            while(tmp!=null){
+                if(tmp.dato.nombre.equals()){
+                    cantCaminos++;
+                }
+                tmp=tmp.siguiente;
+            }
+        return cantCaminos;
+    }
+    
     public boolean esConexo() {
         if (estaVacio()) {
             // Grafo vacío, considerado conexo por definición.
@@ -170,19 +191,7 @@ public class Grafo {
     
     
     
-    public List<Camino> extraerTodosLosCaminos(){
-        List<Camino> listaCaminos=new ArrayList<>();
-        NodoGrafo temp=primero;
-        while(temp!=null){
-            Camino caminoTemp=temp.lista.primero;
-            while(caminoTemp!=null){
-                listaCaminos.add(caminoTemp);
-                caminoTemp= caminoTemp.siguiente;
-            }
-            temp=temp.siguiente;
-        }
-        return listaCaminos;
-    }
+    
     
     
     

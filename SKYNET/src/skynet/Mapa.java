@@ -132,6 +132,12 @@ public class Mapa {
         generarAristasGrafoExpansionMinima();
         //grafoExpansionMinima.generarCaminosVuelta();
     }
+    
+    public void convertirAGrafoDirigido(){
+        generarGrafoExpansionMinima();
+        grafo=grafoExpansionMinima;
+        grafo.conectarGrafoDirigido();
+    }
     //.cgfdñkjgfsdlkfjd{lhjdkgjsf
     
     public void generarGrafoExpansionMinimaBienes(){  

@@ -194,6 +194,10 @@ public class Grafo {
         }
     }
     
+    public void conectarGrafoDirigido(){
+        System.out.println(toString());
+    }
+    
     
     public void generarCaminosVuelta(){
         NodoGrafo temp= primero;

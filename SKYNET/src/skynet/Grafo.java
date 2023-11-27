@@ -249,17 +249,13 @@ public class Grafo {
                     
                     if(temporalIncertar==null){
                         temporalIncertar=primero;
-                    }
-                    
-                    
+                    }  
                 }
                 temp.lista.nuevaAdyacencia(temp.dato, temporalIncertar.dato);
             }
             temp=temp.siguiente;
-            
         }
         System.out.println(toString());
-
     }
     
     

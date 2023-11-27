@@ -137,6 +137,7 @@ public class Mapa {
         generarGrafoExpansionMinima();
         grafo=grafoExpansionMinima;
         grafo.conectarGrafoDirigido();
+        grafo.conectarGrafoDirigido();
     }
     //.cgfdñkjgfsdlkfjd{lhjdkgjsf
     

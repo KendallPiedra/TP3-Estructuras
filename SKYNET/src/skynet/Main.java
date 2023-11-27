@@ -29,11 +29,14 @@ public class Main {
         
         System.out.println("=================================================");
         System.out.println(mapa.grafo.toString());
+        System.out.println("=================================================");        
+        System.out.println(mapa.grafo.esEuleriano());
+        /*
         mapa.generarGrafoExpansionMinima();
         System.out.println("=================================================");
         System.out.println(mapa.grafoExpansionMinima.toString());
         System.out.println(mapa.grafo.esConexo());
-        /*
+        
         Skynet SKINEY=new Skynet(mapa);
         System.out.println(SKINEY.mapaReal.grafo.toString());
         //System.out.println("=================================================");
@@ -49,7 +52,7 @@ public class Main {
         
         System.out.println("PRUEBAAAAAASSSSSSSSS");
         Mapa mapa2=new Mapa();
-        mapa2.generarCiudades("Ciudades6.json");
+        mapa2.generarCiudades("Ciudades10.json");
         mapa2.generarGrafo();
         
         mapa2.convertirAGrafoDirigido();

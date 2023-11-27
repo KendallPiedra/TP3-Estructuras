@@ -1,0 +1,102 @@
+[
+  {
+    "nombre": "Atlanta",
+    "soldados": 3000,
+    "misiles": 2800,
+    "TEChLevel": 6,
+    "caminos": [
+      {
+        "ciudad2": "Chicago",
+        "ejercito": 15,
+        "bienes": 30,
+        "distancia": 700
+      },
+      {
+        "ciudad2": "San Francisco",
+        "ejercito": 18,
+        "bienes": 70,
+        "distancia": 2000
+      }
+    ]
+  },
+  {
+    "nombre": "Chicago",
+    "soldados": 2500,
+    "misiles": 2000,
+    "TEChLevel": 7,
+    "caminos": [
+      {
+        "ciudad2": "Atlanta",
+        "ejercito": 15,
+        "bienes": 30,
+        "distancia": 700
+      },
+      {
+        "ciudad2": "Denver",
+        "ejercito": 20,
+        "bienes": 80,
+        "distancia": 1000
+      }
+    ]
+  },
+  {
+    "nombre": "Los Angeles",
+    "soldados": 3500,
+    "misiles": 3000,
+    "TEChLevel": 9,
+    "caminos": [
+      {
+        "ciudad2": "San Francisco",
+        "ejercito": 12,
+        "bienes": 60,
+        "distancia": 400
+      },
+      {
+        "ciudad2": "Denver",
+        "ejercito": 15,
+        "bienes": 50,
+        "distancia": 1800
+      }
+    ]
+  },
+  {
+    "nombre": "San Francisco",
+    "soldados": 3200,
+    "misiles": 2700,
+    "TEChLevel": 8,
+    "caminos": [
+      {
+        "ciudad2": "Los Angeles",
+        "ejercito": 12,
+        "bienes": 60,
+        "distancia": 400
+      },
+      {
+        "ciudad2": "Atlanta",
+        "ejercito": 18,
+        "bienes": 70,
+        "distancia": 2000
+      }
+    ]
+  },
+  {
+    "nombre": "Denver",
+    "soldados": 2800,
+    "misiles": 2300,
+    "TEChLevel": 7,
+    "caminos": [
+      {
+        "ciudad2": "Chicago",
+        "ejercito": 20,
+        "bienes": 80,
+        "distancia": 1000
+      },
+      {
+        "ciudad2": "Los Angeles",
+        "ejercito": 15,
+        "bienes": 50,
+        "distancia": 1800
+      }
+    ]
+  }
+]

@@ -4,6 +4,7 @@ package skynet;
 import java.util.HashSet;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 import java.util.Stack;
 
@@ -313,6 +314,41 @@ public class Grafo {
             temp.agregarCaminosVuelta();
             temp=temp.siguiente;
         }
+    }
+    
+    public Camino encontrarCaminoNoVisitado(NodoGrafo nodo){
+        Camino camino=nodo.lista.primero;
+        while(camino!=null){
+            if(!camino.isVisitado()){
+                camino.setVisitado(true);
+                return camino;
+            }
+            camino=camino.siguiente;
+        }
+        return null;
+    }
+    
+    public List<Ciudad> obtenerCaminoEuleriano() {
+        List<Ciudad> caminos = new ArrayList<>();
+        if (!esEuleriano()) {
+            return caminos;
+        }
+        Stack<Ciudad> pila = new Stack<>();
+        Ciudad inicio = primero.dato; 
+        pila.push(inicio);
+        while(!pila.isEmpty()){
+            Ciudad actual = pila.peek();
+
+            if (encontrarCaminoNoVisitado(actual.nodo)!=null) {
+                Ciudad siguiente = encontrarCaminoNoVisitado(actual.nodo).destino;
+                pila.push(siguiente);
+            } else {
+                pila.pop();
+                caminos.add(actual);
+            }
+        }
+
+        return caminos;
     }
     
     @Override

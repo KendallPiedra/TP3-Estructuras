@@ -207,37 +207,7 @@ public class Mapa {
         return null;
     }
     
-     public List<Ciudad> obtenerCaminoEuleriano() {
-        List<Ciudad> camino = new ArrayList<>();
-
-        if (!grafo.esEuleriano()) {
-            return camino;
-        }
-
-        Stack<Ciudad> pila = new Stack<>();
-        Ciudad actual = grafo.primero.dato; // Tomamos cualquier ciudad como inicio
-
-        pila.push(actual);
-
-        while (!pila.isEmpty()) {
-            if (adyacencias.containsKey(actual) && !adyacencias.get(actual).isEmpty()) {
-                pila.push(actual);
-
-                Ciudad siguiente = adyacencias.get(actual).remove(0);
-                eliminarArista(actual, siguiente);
-
-                actual = siguiente;
-            } else {
-                camino.add(actual);
-                actual = pila.pop();
-            }
-        }
-
-        // Invertir el camino encontrado, ya que se agrega al principio
-        Collections.reverse(camino);
-
-        return camino;
-    }
+     
    
     /*
     public void generarCiudades(String nombre){

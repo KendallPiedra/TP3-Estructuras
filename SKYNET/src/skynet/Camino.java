@@ -12,6 +12,7 @@ public class Camino { //(ARCOS)
     Ciudad destino;
     Camino siguiente;
     int ejercito, bienes, distancia;
+    boolean visitado;
 
     public Camino(String ciudad2, int ejercito, int bienes, int distancia) {
         this.ciudad2 = ciudad2;
@@ -20,6 +21,7 @@ public class Camino { //(ARCOS)
         this.distancia = distancia;
         this.destino=null;
         this.siguiente=null;
+        visitado=false;
     }
     public Camino(Ciudad origen,Ciudad destino,int ejercito, int bienes, int distancia) {
         this.destino = destino;
@@ -28,12 +30,14 @@ public class Camino { //(ARCOS)
         this.bienes = bienes;
         this.distancia = distancia;
         this.siguiente=null;
+        visitado=false;
     }
     
     public Camino(Ciudad destino){
         this.destino= destino;
         ejercito=bienes=distancia=0;
         this.siguiente=null;
+        visitado=false;
     }
 
     public String getCiudad2() {
@@ -66,6 +70,14 @@ public class Camino { //(ARCOS)
 
     public void setDistancia(int distancia) {
         this.distancia = distancia;
+    }
+    
+    public void setVisitado(boolean visitado){
+        this.visitado=visitado;
+    }
+    
+    public boolean isVisitado(){
+        return visitado;
     }
 
     @Override

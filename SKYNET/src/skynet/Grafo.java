@@ -164,6 +164,20 @@ public class Grafo {
         return listaCaminos;
     }
     
+    public void eliminarCamino(Camino camino){
+        NodoGrafo temp=primero;
+        while(temp!=null){
+            Camino caminoTemp=temp.lista.primero;
+            while(caminoTemp!=null){
+                if(camino.origen.nombre.equals(caminoTemp.origen.nombre)&&camino.destino.nombre.equals(caminoTemp.destino.nombre)){
+                    camino.origen.nodo.lista.eliminarAdyacencia(camino.destino);
+                }
+                caminoTemp= caminoTemp.siguiente;
+            }
+            temp=temp.siguiente;
+        }
+    }
+    
    //============================================================================    
     public void limpiarRegistroVisita(){
         NodoGrafo temp=primero;

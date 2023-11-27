@@ -185,6 +185,7 @@ public class Grafo {
        while(temp.dato!=camino.origen){
            temp=temp.siguiente;
        }
+       temp.lista.eliminarAdyacencia(camino.destino);
        
     }
     

@@ -186,6 +186,7 @@ public class Mapa {
                 }
             }
         }
+        grafoExpansionMinima.generarCaminosVuelta();
     }
     
     public String extraerCiudadMásCaminos(){

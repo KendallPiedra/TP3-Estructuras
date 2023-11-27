@@ -9,11 +9,10 @@ package skynet;
  * @author krisc
  */
 public class Funciones {
-    public static boolean determinarParImpar(int numero) {
+    public static boolean esPar(int numero) {
         if (numero % 2 == 0) {
             return true;
-        } else {
-            return "Impar";
         }
+        return false;
     }
 }

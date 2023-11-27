@@ -177,8 +177,8 @@ public class Grafo {
     public boolean esEuleriano(){
         NodoGrafo tmp=primero;
         while(tmp!=null){
-            if(tmp.totalCaminos()){
-                
+            if(!Funciones.esPar(tmp.totalCaminos())){
+                return false;
             }
             tmp=tmp.siguiente;
         }

@@ -26,7 +26,7 @@ public class Skynet {
         mapaReal.generarGrafoExpansionMinimaBienes();
         List<Camino> listaCaminos= mapaReal.grafoExpansionMinima.extraerTodosLosCaminos();
         for(Camino camino: listaCaminos){
-            
+            eliminarCamino(camino);
         }
     }
     

@@ -147,6 +147,19 @@ public class Grafo {
         }
         return camino;
     }
+    public Ciudad retornarCiudadConMasCaminos(){
+        NodoGrafo temp =primero;
+        int maxCaminos=0;
+        Ciudad camino=temp.dato;
+        while (temp!=null){
+            if (temp.totalCaminos()>maxCaminos){
+                maxCaminos=temp.totalCaminos();
+                camino= temp.dato;
+            }
+            temp=temp.siguiente;
+        }
+        return camino;
+    }
     
     
     
@@ -194,8 +207,59 @@ public class Grafo {
         }
     }
     
+    /**
+     *  Saca las ciudades que se dirigen a la ciudad puesta como parametro
+     * @param nodo
+     */
+    public List<Ciudad> sacarListaDeCiudadesDirigidas(NodoGrafo nodo){
+        List<Ciudad>listaCiudades=new ArrayList<>();
+        NodoGrafo temp= primero;
+        while(temp!=null){
+            Camino tempCamino=temp.lista.primero;
+            while(tempCamino!=null){
+                if(tempCamino.destino.nombre.equals(nodo.dato.nombre)){
+                    listaCiudades.add(temp.dato);
+                    break;
+                }
+                tempCamino=tempCamino.siguiente;
+            }
+            temp=temp.siguiente;
+        }
+        return listaCiudades;
+    }
+    
+    public boolean esDirigidoA(NodoGrafo nodo1, NodoGrafo nodo2){
+        List<Ciudad> listaCiudades=sacarListaDeCiudadesDirigidas(nodo2);
+        for(Ciudad ciudad:listaCiudades){
+            if(nodo1.dato.nombre.equals(ciudad.nombre)){
+                return true;
+            }
+        }
+        return false;
+    }
+    
     public void conectarGrafoDirigido(){
+        
+        NodoGrafo temp=primero; 
+        while(temp!=null){
+            if(temp.lista.listaVacia()){
+                NodoGrafo temporalIncertar=retornarCiudadConMasCaminos().nodo;
+                while(esDirigidoA(temporalIncertar,temp)){
+                    temporalIncertar=temporalIncertar.siguiente;
+                    
+                    if(temporalIncertar==null){
+                        temporalIncertar=primero;
+                    }
+                    
+                    
+                }
+                temp.lista.nuevaAdyacencia(temp.dato, temporalIncertar.dato);
+            }
+            temp=temp.siguiente;
+            
+        }
         System.out.println(toString());
+
     }
     
     

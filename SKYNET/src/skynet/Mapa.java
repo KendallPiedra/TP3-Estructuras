@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -136,7 +137,7 @@ public class Mapa {
     public void generarGrafoExpansionMinimaBienes(){
         grafoExpansionMinima= new Grafo();
         Set<Ciudad> nodosIncluidos = new HashSet<>();
-        PriorityQueue<Camino> colaPrioridad = new PriorityQueue<>();
+        PriorityQueue<Camino> colaPrioridad = new PriorityQueue<>(Comparator.comparingInt(Camino::getBienes));
         Ciudad nodoInicial = grafo.primero.dato;
         grafoExpansionMinima.crearNuevoNodo(nodoInicial);
         nodosIncluidos.add(nodoInicial);

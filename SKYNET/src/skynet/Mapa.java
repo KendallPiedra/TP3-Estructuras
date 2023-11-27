@@ -152,7 +152,7 @@ public class Mapa {
             if (!nodosIncluidos.contains(nodoDestino)) {
                 grafoExpansionMinima.crearNuevoNodo(nodoDestino);
                 nodosIncluidos.add(nodoDestino);
-                grafoExpansionMinima.annadirNuevaArista(, nodoDestino,);
+                grafoExpansionMinima.annadirNuevaArista(aristaActual.origen, nodoDestino,aristaActual.ejercito,aristaActual.bienes,aristaActual.distancia);
                 
                 // Agregar las aristas del nodo de destino a la cola de prioridad
                 for (Camino arista : nodoDestino.caminos) {

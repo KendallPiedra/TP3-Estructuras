@@ -8,6 +8,7 @@ package skynet;
 public class Camino { //(ARCOS)
     
     String ciudad2;
+    Ciudad origen;
     Ciudad destino;
     Camino siguiente;
     int ejercito, bienes, distancia;
@@ -20,8 +21,9 @@ public class Camino { //(ARCOS)
         this.destino=null;
         this.siguiente=null;
     }
-    public Camino(Ciudad destino, int ejercito, int bienes, int distancia) {
+    public Camino(Ciudad origen,Ciudad destino,int ejercito, int bienes, int distancia) {
         this.destino = destino;
+        this.origen = origen;
         this.ejercito = ejercito;
         this.bienes = bienes;
         this.distancia = distancia;

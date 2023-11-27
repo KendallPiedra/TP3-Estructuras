@@ -15,7 +15,7 @@ import java.util.Properties;
  * @author Usuario
  */
 public class Mapa {
-    List<Camino> caminos= new ArrayList<>();
+    //List<Camino> caminos= new ArrayList<>();
     List<Ciudad> ciudades= new ArrayList<>();
     Grafo grafo;
     Grafo grafoExpansionMinima;
@@ -31,7 +31,7 @@ public class Mapa {
     
     public Mapa() {
     }
-
+/*
     public List<Camino> getCaminos() {
         return caminos;
     }
@@ -39,7 +39,7 @@ public class Mapa {
     public void setCaminos(List<Camino> caminos) {
         this.caminos = caminos;
     }
-
+*/
     public List<Ciudad> getCiudades() {
         return ciudades;
     }
@@ -112,7 +112,20 @@ public class Mapa {
             }
         }
     }
+//ESTOY IIMRPOVISANDO MUY FUERTEMENTE
+    public void generarAristasGrafoExpansionMinimaBienes(Ciudad actual){
+        List<Camino> caminos=actual.caminos;
+        if (actual.nodo.lista.listaVacia()){
+            grafoExpansionMinima.annadirNuevaArista(actual, actual.caminos.get(0).destino); //NO SE AGREGA PESO
+            actual.caminos.get(0).destino.setVisitado(true);
+        }
+        noSE(0);
+    }
     
+    public int noSE(int n){
+        return n;
+    }
+//ESTOY IIMRPOVISANDO MUY FUERTEMENTE    
     public void generarGrafo(){
         grafo= new Grafo();
         for(Ciudad ciudad: ciudades){
@@ -129,10 +142,14 @@ public class Mapa {
         generarAristasGrafoExpansionMinima();
         grafoExpansionMinima.generarCaminosVuelta();
     }
-    
+    //.cgfdñkjgfsdlkfjd{lhjdkgjsf
     public void generarGrafoExpansionMinimaBienes(){
         grafoExpansionMinima= new Grafo();
-        grafoExpansionMinima.crearNuevoNodo(grafo.primero.dato);
+        for(Ciudad ciudad: ciudades){
+            grafoExpansionMinima.crearNuevoNodo(ciudad);
+        }
+        generarAristasGrafoExpansionMinimaBienes(grafoExpansionMinima.primero.dato);
+        
     }
     
     public String extraerCiudadMásCaminos(){

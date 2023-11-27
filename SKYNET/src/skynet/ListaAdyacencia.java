@@ -22,26 +22,27 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
     
     /**
      * Annade una nueva adyacencia 
+     * @param origen
      * @param destino
      * @param ejercito
      * @param bienes
      * @param distancia
      */
-    public void nuevaAdyacencia(Ciudad destino,int ejercito, int bienes, int distancia){
+    public void nuevaAdyacencia(Ciudad origen,Ciudad destino,int ejercito, int bienes, int distancia){
         if (!esAdyacente(destino)){
-            Camino nodo = new Camino(destino, ejercito, bienes, distancia);
+            Camino nodo = new Camino(origen,destino ,ejercito, bienes, distancia);
             insertar(nodo,destino);
         }
     } 
     
-    public void nuevaAdyacencia(Ciudad destino){
+    public void nuevaAdyacencia(Ciudad Origen,Ciudad destino){
         if (!esAdyacente(destino)){
             Camino nodo = new Camino(destino);
             insertar(nodo,destino);
         }
     } 
     
-    public void insertar(Camino nodo, Ciudad destino){//modificar para que inserte por PESO
+    public void insertar(Camino nodo, Ciudad destino){
         if(listaVacia()){
             primero=ultimo=nodo;
         }else{
@@ -137,7 +138,7 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
     public void agragarCaminosVuelta(Ciudad ciudad){
         Camino temp=primero;
         while(temp!=null){
-            temp.destino.nodo.lista.nuevaAdyacencia(ciudad, temp.ejercito, temp.bienes, temp.distancia);
+            temp.destino.nodo.lista.nuevaAdyacencia(temp.destino,ciudad, temp.ejercito, temp.bienes, temp.distancia);
             temp=temp.siguiente;
         }
     }

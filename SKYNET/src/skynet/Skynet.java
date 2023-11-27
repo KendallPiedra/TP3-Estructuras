@@ -1,6 +1,8 @@
 
 package skynet;
 
+import java.util.List;
+
 /**
  *
  * @author Usuario
@@ -22,6 +24,10 @@ public class Skynet {
     
     public void bloquearArbolExpansionMinBienes(){
         mapaReal.generarGrafoExpansionMinimaBienes();
+        List<Camino> listaCaminos= mapaReal.grafoExpansionMinima.extraerTodosLosCaminos();
+        for(Camino camino: listaCaminos){
+            
+        }
     }
     
     

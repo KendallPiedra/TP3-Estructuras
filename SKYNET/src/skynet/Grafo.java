@@ -38,7 +38,7 @@ public class Grafo {
             while(!posicion.dato.nombre.equals(origen.nombre)){
                 posicion=posicion.siguiente;
             }
-            posicion.lista.nuevaAdyacencia(destino, ejercito, bienes, distancia);
+            posicion.lista.nuevaAdyacencia(origen,destino, ejercito, bienes, distancia);
         }
     }
     
@@ -48,7 +48,7 @@ public class Grafo {
             while(!posicion.dato.nombre.equals(origen.nombre)){
                 posicion=posicion.siguiente;
             }
-            posicion.lista.nuevaAdyacencia(destino);
+            posicion.lista.nuevaAdyacencia(origen,destino);
         }
     }
     

@@ -3,6 +3,7 @@ package skynet;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Stack;
 
 /**
@@ -149,7 +150,19 @@ public class Grafo {
     
     
     
-    
+    public List<Camino> extraerTodosLosCaminos(){
+        List<Camino> listaCaminos=new ArrayList<>();
+        NodoGrafo temp=primero;
+        while(temp!=null){
+            Camino caminoTemp=temp.lista.primero;
+            while(caminoTemp!=null){
+                listaCaminos.add(caminoTemp);
+                caminoTemp= caminoTemp.siguiente;
+            }
+            temp=temp.siguiente;
+        }
+        return listaCaminos;
+    }
     
    //============================================================================    
     public void limpiarRegistroVisita(){

@@ -199,54 +199,7 @@ public class Grafo {
         }
         return true;
     }
-    
-    private void dfs(Ciudad inicio, HashSet<Ciudad> visitados, HashSet<Ciudad> nodosConectados) {
-        Random rand = new Random();
-        Stack<Ciudad> stack = new Stack<>();
-        stack.push(inicio);
 
-        while (!stack.isEmpty()) {
-            Ciudad actual = stack.pop();
-
-            if (!visitados.contains(actual)) {
-                visitados.add(actual);
-                nodosConectados.add(actual);
-                // Agregar aristas dirigidas salientes
-                NodoGrafo nodoActual = obtenerNodoPorCiudad(actual);
-                Camino aristaActual=nodoActual.lista.primero;
-                while (aristaActual!=null) {
-                    stack.push(aristaActual.destino);
-                    aristaActual=aristaActual.siguiente;
-                }
-            }
-        }
-        // Conectar nodos no conectados
-        for (Ciudad nodoNoConectado : nodosConectados) {
-            if (!nodoNoConectado.equals(inicio)) {
-                annadirNuevaArista(inicio, nodoNoConectado, rand.nextInt(101), rand.nextInt(101),rand.nextInt(2001)); 
-            }
-        }
-    }
-    
-    public void convertirGrafoDirigidoConexo() {
-        HashSet<Ciudad> visitados = new HashSet<>();
-        HashSet<Ciudad> nodosConectados = new HashSet<>();
-        NodoGrafo temp = primero;
-        
-        dfs(temp.dato, visitados, nodosConectados);
-
-        temp = primero;
-        while (temp != null) {
-            if (!visitados.contains(temp.dato)) {
-                // Realizar DFS desde un nodo no conectado
-                dfs(temp.dato, visitados, nodosConectados);
-            }
-        temp = temp.siguiente;
-        }
-    }
-
-    
-    
    //============================================================================    
     public void limpiarRegistroVisita(){
         NodoGrafo temp=primero;
@@ -320,7 +273,6 @@ public class Grafo {
         Camino camino=nodo.lista.primero;
         while(camino!=null){
             if(!camino.isVisitado()){
-                camino.setVisitado(true);
                 return camino;
             }
             camino=camino.siguiente;
@@ -330,9 +282,11 @@ public class Grafo {
     
     public List<Ciudad> obtenerCaminoEuleriano() {
         List<Ciudad> caminos = new ArrayList<>();
+        /*
         if (!esEuleriano()) {
             return caminos;
         }
+        */
         Stack<Ciudad> pila = new Stack<>();
         Ciudad inicio = primero.dato; 
         pila.push(inicio);
@@ -340,14 +294,16 @@ public class Grafo {
             Ciudad actual = pila.peek();
 
             if (encontrarCaminoNoVisitado(actual.nodo)!=null) {
-                Ciudad siguiente = encontrarCaminoNoVisitado(actual.nodo).destino;
+                Camino camino = encontrarCaminoNoVisitado(actual.nodo);
+                camino.setVisitado(true);
+                Ciudad siguiente=camino.destino;
                 pila.push(siguiente);
             } else {
                 pila.pop();
                 caminos.add(actual);
             }
         }
-
+        Collections.reverse(caminos);
         return caminos;
     }
     

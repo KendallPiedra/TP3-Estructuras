@@ -133,7 +133,7 @@ public class Grafo {
         return contador;
     }
     
-    public String encontrarRoma(){
+    public String encontrarCiudadConMasCaminos(){
         NodoGrafo temp =primero;
         int maxCaminos=0;
         String camino="NO HAY CAMINO";

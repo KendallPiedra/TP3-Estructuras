@@ -45,16 +45,16 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
         if(listaVacia()){
             primero=ultimo=nodo;
         }else{
-            if(destino.nombre.compareTo(primero.destino.toString())<=0){ //metodo de ordenamiento(PODEMOS REMPLAZAR)
+            if(nodo.bienes<=primero.bienes){ //metodo de ordenamiento(PODEMOS REMPLAZAR)
                 nodo.siguiente=primero;
                 primero=nodo;
             }else{
-                if(destino.nombre.compareTo(ultimo.destino.nombre)>=0){
+                if(nodo.bienes>=ultimo.bienes){
                     ultimo.siguiente= nodo;
                     ultimo=nodo;
                 } else{
                     Camino posicion= primero;
-                    while(destino.nombre.compareTo(posicion.destino.nombre)<=0){
+                    while(nodo.bienes<=posicion.bienes){
                         posicion=posicion.siguiente;
                     }
                     nodo.siguiente=posicion.siguiente;

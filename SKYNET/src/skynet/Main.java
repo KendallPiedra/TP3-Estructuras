@@ -62,7 +62,7 @@ public class Main {
         mapa2.generarCiudades("Ciudades6.json");
         mapa2.generarGrafo();
         
-        mapa2.convertirAGrafoDirigido(); //Hablar con Ken de esto a ver si hacemos algo al respecto
+        mapa2.convertirAGrafoDirigido(); 
         */
     }
 

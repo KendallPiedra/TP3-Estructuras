@@ -35,6 +35,11 @@ public class Grafo {
         return false;
     }
     
+    public int contarConexiones(){
+        
+        return 0;
+    }
+    
     public void annadirNuevaArista(Ciudad origen, Ciudad destino, int ejercito, int bienes, int distancia){
         if(existeVertice(origen)&&existeVertice(destino)){
             NodoGrafo posicion=primero;
@@ -191,9 +196,12 @@ public class Grafo {
     
     public boolean esEuleriano(){
         NodoGrafo tmp=primero;
+        int impar=0;
         while(tmp!=null){
-            if(!Funciones.esPar(tmp.totalCaminos())){
+            if(!Funciones.esPar(tmp.totalCaminos())&& impar>2){
                 return false;
+            }else{
+                impar++;
             }
             tmp=tmp.siguiente;
         }

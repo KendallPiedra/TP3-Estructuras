@@ -7,8 +7,11 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Properties;
+import java.util.Set;
 
 /**
  *
@@ -132,7 +135,31 @@ public class Mapa {
     
     public void generarGrafoExpansionMinimaBienes(){
         grafoExpansionMinima= new Grafo();
-        grafoExpansionMinima.crearNuevoNodo(grafo.primero.dato);
+        Set<Ciudad> nodosIncluidos = new HashSet<>();
+        PriorityQueue<Camino> colaPrioridad = new PriorityQueue<>();
+        Ciudad nodoInicial = grafo.primero.dato;
+        grafoExpansionMinima.crearNuevoNodo(nodoInicial);
+        nodosIncluidos.add(nodoInicial);
+
+        for (Camino arista : nodoInicial.caminos) {
+            colaPrioridad.add(arista);
+        }
+
+        while (!colaPrioridad.isEmpty()) {
+            Camino aristaActual = colaPrioridad.poll();
+            Ciudad nodoDestino = aristaActual.destino;
+
+            if (!nodosIncluidos.contains(nodoDestino)) {
+                grafoExpansionMinima.crearNuevoNodo(nodoDestino);
+                nodosIncluidos.add(nodoDestino);
+                grafoExpansionMinima.annadirNuevaArista(, nodoDestino,);
+                
+                // Agregar las aristas del nodo de destino a la cola de prioridad
+                for (Camino arista : nodoDestino.caminos) {
+                    colaPrioridad.add(arista);
+                }
+            }
+        }
     }
     
     public String extraerCiudadMásCaminos(){

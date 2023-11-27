@@ -4,6 +4,7 @@ package skynet;
 import java.util.HashSet;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Stack;
 
 /**
@@ -197,6 +198,53 @@ public class Grafo {
         }
         return true;
     }
+    
+    private void dfs(Ciudad inicio, HashSet<Ciudad> visitados, HashSet<Ciudad> nodosConectados) {
+        Random rand = new Random();
+        Stack<Ciudad> stack = new Stack<>();
+        stack.push(inicio);
+
+        while (!stack.isEmpty()) {
+            Ciudad actual = stack.pop();
+
+            if (!visitados.contains(actual)) {
+                visitados.add(actual);
+                nodosConectados.add(actual);
+                // Agregar aristas dirigidas salientes
+                NodoGrafo nodoActual = obtenerNodoPorCiudad(actual);
+                Camino aristaActual=nodoActual.lista.primero;
+                while (aristaActual!=null) {
+                    stack.push(aristaActual.destino);
+                    aristaActual=aristaActual.siguiente;
+                }
+            }
+        }
+        // Conectar nodos no conectados
+        for (Ciudad nodoNoConectado : nodosConectados) {
+            if (!nodoNoConectado.equals(inicio)) {
+                annadirNuevaArista(inicio, nodoNoConectado, rand.nextInt(101), rand.nextInt(101),rand.nextInt(2001)); 
+            }
+        }
+    }
+    
+    public void convertirGrafoDirigidoConexo() {
+        HashSet<Ciudad> visitados = new HashSet<>();
+        HashSet<Ciudad> nodosConectados = new HashSet<>();
+        NodoGrafo temp = primero;
+        
+        dfs(temp.dato, visitados, nodosConectados);
+
+        temp = primero;
+        while (temp != null) {
+            if (!visitados.contains(temp.dato)) {
+                // Realizar DFS desde un nodo no conectado
+                dfs(temp.dato, visitados, nodosConectados);
+            }
+        temp = temp.siguiente;
+        }
+    }
+
+    
     
    //============================================================================    
     public void limpiarRegistroVisita(){

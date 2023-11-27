@@ -7,12 +7,16 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Properties;
 import java.util.Set;
+import java.util.Stack;
 
 /**
  *
@@ -137,7 +141,6 @@ public class Mapa {
         generarGrafoExpansionMinima();
         grafo=grafoExpansionMinima;
         grafo.conectarGrafoDirigido();
-        grafo.conectarGrafoDirigido();
     }
     //.cgfdñkjgfsdlkfjd{lhjdkgjsf
     
@@ -199,17 +202,84 @@ public class Mapa {
         generarGrafo();
     }
     
-    public void borrarCaminos(){
+    public List<ListaAdyacencia> caminoMasEficiente(Ciudad origen, Ciudad destino) {
         
+        return null;
     }
     
-    
-    
+     public List<Ciudad> obtenerCaminoEuleriano() {
+        List<Ciudad> camino = new ArrayList<>();
+
+        if (!grafo.esEuleriano()) {
+            return camino;
+        }
+
+        Stack<Ciudad> pila = new Stack<>();
+        Ciudad actual = grafo.primero.dato; // Tomamos cualquier ciudad como inicio
+
+        pila.push(actual);
+
+        while (!pila.isEmpty()) {
+            if (adyacencias.containsKey(actual) && !adyacencias.get(actual).isEmpty()) {
+                pila.push(actual);
+
+                Ciudad siguiente = adyacencias.get(actual).remove(0);
+                eliminarArista(actual, siguiente);
+
+                actual = siguiente;
+            } else {
+                camino.add(actual);
+                actual = pila.pop();
+            }
+        }
+
+        // Invertir el camino encontrado, ya que se agrega al principio
+        Collections.reverse(camino);
+
+        return camino;
+    }
    
     /*
     public void generarCiudades(String nombre){
         Gson gson=leerJSON(nombre);
-        
+        Map<Ciudad, Integer> distancias = new HashMap<>();
+        Map<Ciudad, Ciudad> padres = new HashMap<>();
+        PriorityQueue<Camino> colaPrioridad = new PriorityQueue<>(Comparator.comparingInt(a -> a.distancia));
+
+        // Inicializar distancias
+        NodoGrafo nodo=grafo.primero;
+        while (nodo!=null ) {
+            distancias.put(nodo.dato, Integer.MAX_VALUE);
+            padres.put(nodo.dato, null);
+            nodo=nodo.siguiente;
+        }
+        distancias.put(origen, 0);
+
+        colaPrioridad.offer(new Camino(origen, origen, 0,0,0));
+
+        while (!colaPrioridad.isEmpty()) {
+            Ciudad actual = colaPrioridad.poll().destino;
+
+            for (Camino arista : actual.caminos) {
+                int nuevaDistancia = distancias.get(actual) + arista.distancia;
+                if (nuevaDistancia < distancias.get(arista.destino)) {
+                    distancias.put(arista.destino, nuevaDistancia);
+                    padres.put(arista.destino, actual);
+                    colaPrioridad.offer(new Camino(origen,arista.destino, 0,0,nuevaDistancia));
+                }
+            }
+        }
+
+        // Reconstruir el camino
+        List<Ciudad> camino = new ArrayList<>();
+        Ciudad paso = destino;
+        while (paso != null) {
+            camino.add(paso);
+            paso = padres.get(paso);
+        }
+        Collections.reverse(camino);
+
+        return camino;
 
     }
 */

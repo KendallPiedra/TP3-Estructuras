@@ -1,6 +1,8 @@
 
 package skynet;
 
+import java.util.List;
+
 /**
  *
  * @author Usuario
@@ -52,13 +54,11 @@ public class Main {
         
         System.out.println("PRUEBAAAAAASSSSSSSSS");
         Mapa mapa2=new Mapa();
-        mapa2.generarCiudades("Ciudades10.json");
+        mapa2.generarCiudades("Ciudades6.json");
         mapa2.generarGrafo();
         
-        mapa2.convertirAGrafoDirigido();
+        mapa2.convertirAGrafoDirigido(); //Hablar con Ken de esto a ver si hacemos algo al respecto
         
     }
-    
-    
-    
+
 }

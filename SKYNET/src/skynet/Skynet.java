@@ -22,7 +22,6 @@ public class Skynet {
     
     public void bloquearArbolExpansionMinBienes(){
         mapaReal.generarGrafoExpansionMinimaBienes();
-        
     }
     
     

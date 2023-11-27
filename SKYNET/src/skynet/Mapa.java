@@ -192,6 +192,10 @@ public class Mapa {
         generarGrafo();
     }
     
+    public void borrarCaminos(){
+        
+    }
+    
    
     /*
     public void generarCiudades(String nombre){

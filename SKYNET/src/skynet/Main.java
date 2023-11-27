@@ -37,8 +37,9 @@ public class Main {
         Skynet SKINEY=new Skynet(mapa);
         System.out.println(SKINEY.mapaReal.grafo.toString());
         System.out.println("=================================================");
-        SKINEY.dividirAlMundo();
-        System.out.println(SKINEY.mapaReal.grafo.toString());
+        //SKINEY.dividirAlMundo();
+        SKINEY.bloquearArbolExpansionMinBienes();
+        System.out.println(SKINEY.mapaReal.grafoExpansionMinima.toString());
         
         
         

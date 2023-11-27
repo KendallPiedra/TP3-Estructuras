@@ -155,29 +155,34 @@ public class Mapa {
     
         generarAristasGrafoExpansionMinimaBienes(grafoExpansionMinima.primero.dato);
     }
-    public void generarGrafoExpansionMinimaBienes(){    
+    public void generarGrafoExpansionMinimaBienes(){  
+        grafoExpansionMinima= new Grafo();
         Set<Ciudad> nodosIncluidos = new HashSet<>();
         PriorityQueue<Camino> colaPrioridad = new PriorityQueue<>(Comparator.comparingInt(Camino::getBienes));
-        Ciudad nodoInicial = grafo.primero.dato;
-        grafoExpansionMinima.crearNuevoNodo(nodoInicial);
-        nodosIncluidos.add(nodoInicial);
-
-        for (Camino arista : nodoInicial.caminos) {
-            colaPrioridad.add(arista);
+        NodoGrafo nodoInicial = grafo.primero;
+        grafoExpansionMinima.crearNuevoNodo(nodoInicial.dato);
+        nodosIncluidos.add(nodoInicial.dato);
+        
+        Camino tmp= nodoInicial.lista.primero;
+        while (tmp!=null) {
+            colaPrioridad.add(tmp);
+            tmp=tmp.siguiente;
         }
 
         while (!colaPrioridad.isEmpty()) {
             Camino aristaActual = colaPrioridad.poll();
-            Ciudad nodoDestino = aristaActual.destino;
+            NodoGrafo nodoDestino = aristaActual.destino.nodo;
 
-            if (!nodosIncluidos.contains(nodoDestino)) {
-                grafoExpansionMinima.crearNuevoNodo(nodoDestino);
-                nodosIncluidos.add(nodoDestino);
-                grafoExpansionMinima.annadirNuevaArista(aristaActual.origen, nodoDestino,aristaActual.ejercito,aristaActual.bienes,aristaActual.distancia);
+            if (!nodosIncluidos.contains(nodoDestino.dato)) {
+                grafoExpansionMinima.crearNuevoNodo(nodoDestino.dato);
+                nodosIncluidos.add(nodoDestino.dato);
+                grafoExpansionMinima.annadirNuevaArista(aristaActual.origen, nodoDestino.dato,aristaActual.ejercito,aristaActual.bienes,aristaActual.distancia);
                 
                 // Agregar las aristas del nodo de destino a la cola de prioridad
-                for (Camino arista : nodoDestino.caminos) {
-                    colaPrioridad.add(arista);
+                tmp= nodoDestino.lista.primero;
+                while (tmp!=null) {
+                    colaPrioridad.add(tmp);
+                    tmp=tmp.siguiente;
                 }
             }
         }

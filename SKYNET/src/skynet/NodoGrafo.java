@@ -14,7 +14,7 @@ public class NodoGrafo {
         dato=ciudad;
         lista=new ListaAdyacencia();
         siguiente=null;
-        ciudad.setNodo(this);
+        dato.setNodo(this);
     }
     
     public int totalCaminos(){

@@ -80,7 +80,7 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
             return;
         }
 
-        if (primero.destino.equals(destino)) {
+        if (primero.destino.comparar(destino)) {
             primero = primero.siguiente;
             if (primero == null) {
                 ultimo = null;

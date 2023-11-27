@@ -67,7 +67,12 @@ public class Camino { //(ARCOS)
     public void setDistancia(int distancia) {
         this.distancia = distancia;
     }
-    
 
+    @Override
+    public String toString() {
+        return origen.nombre+"->"+destino.nombre;
+    }
+    
+    
 
 }

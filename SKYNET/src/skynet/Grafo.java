@@ -172,7 +172,6 @@ public class Grafo {
            temp=temp.siguiente;
        }
        temp.lista.eliminarAdyacencia(camino.destino);
-       
     }
     
    //============================================================================    

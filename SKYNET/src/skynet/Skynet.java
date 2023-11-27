@@ -27,7 +27,7 @@ public class Skynet {
         List<Camino> listaCaminos= mapaReal.grafoExpansionMinima.extraerTodosLosCaminos();
         for(Camino camino: listaCaminos){
             //System.out.println(camino.toString()+"---------------------");
-            mapaReal.grafo.eliminarCamino2(camino);
+            mapaReal.grafo.eliminarCamino(camino);
         }
     }
     

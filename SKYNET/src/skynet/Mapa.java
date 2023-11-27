@@ -133,14 +133,7 @@ public class Mapa {
         grafoExpansionMinima.generarCaminosVuelta();
     }
     //.cgfdñkjgfsdlkfjd{lhjdkgjsf
-    public void generarGrafoExpansionMinimaBienes2(){
-        grafoExpansionMinima= new Grafo();
-        for(Ciudad ciudad: ciudades){
-            grafoExpansionMinima.crearNuevoNodo(ciudad);
-        }
     
-        generarAristasGrafoExpansionMinimaBienes(grafoExpansionMinima.primero.dato);
-    }
     public void generarGrafoExpansionMinimaBienes(){  
         grafoExpansionMinima= new Grafo();
         Set<Ciudad> nodosIncluidos = new HashSet<>();

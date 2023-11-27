@@ -18,7 +18,7 @@ public class NodoGrafo {
     }
     
     public int totalCaminos(){
-        return lista.totalAdyacencias();
+        return lista.largo();
     }
 
     public Ciudad getDato() {

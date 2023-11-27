@@ -167,11 +167,22 @@ public class Grafo {
     
     
     public void eliminarCamino(Camino camino){
-       NodoGrafo temp=primero;
-       while(temp.dato!=camino.origen){
-           temp=temp.siguiente;
-       }
-       temp.lista.eliminarAdyacencia(camino.destino);
+        NodoGrafo temp=primero;
+        while(temp.dato!=camino.origen){
+            temp=temp.siguiente;
+        }
+        temp.lista.eliminarAdyacencia(camino.destino);
+    }
+    
+    public boolean esEuleriano(){
+        NodoGrafo tmp=primero;
+        while(tmp!=null){
+            if(tmp.totalCaminos()){
+                
+            }
+            tmp=tmp.siguiente;
+        }
+        return true;
     }
     
    //============================================================================    

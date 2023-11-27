@@ -26,24 +26,26 @@ public class Main {
         }
         mapa.generarGrafo();
 
-        /*
+        
         System.out.println("=================================================");
         System.out.println(mapa.grafo.toString());
         mapa.generarGrafoExpansionMinima();
         System.out.println("=================================================");
         System.out.println(mapa.grafoExpansionMinima.toString());
         System.out.println(mapa.grafo.esConexo());
-        */
+        /*
         Skynet SKINEY=new Skynet(mapa);
         System.out.println(SKINEY.mapaReal.grafo.toString());
-        System.out.println("=================================================");
+        //System.out.println("=================================================");
         //SKINEY.dividirAlMundo();
-        SKINEY.bloquearArbolExpansionMinBienes();
-        System.out.println(SKINEY.mapaReal.grafo.toString());
-        System.out.println("=================================================");
+        //SKINEY.bloquearArbolExpansionMinBienes();
+        //System.out.println(SKINEY.mapaReal.grafo.toString());
+        //System.out.println("=================================================");
         //System.out.println(SKINEY.mapaReal.grafoExpansionMinima.toString());
-        
-        
+
+
+
+        */
         
         System.out.println("PRUEBAAAAAASSSSSSSSS");
         Mapa mapa2=new Mapa();
@@ -51,8 +53,6 @@ public class Main {
         mapa2.generarGrafo();
         
         mapa2.convertirAGrafoDirigido();
-
-        
         
     }
     

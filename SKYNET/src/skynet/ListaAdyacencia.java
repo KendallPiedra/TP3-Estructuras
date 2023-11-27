@@ -111,7 +111,7 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
         return listaVecinos;
     }
     
-    public int totalAdyacencias(){
+    public int largo(){
         Camino temp= primero;
         int total=0;
         while(temp!=null){
@@ -142,7 +142,5 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
             temp=temp.siguiente;
         }
     }
-    
-    
     
 }

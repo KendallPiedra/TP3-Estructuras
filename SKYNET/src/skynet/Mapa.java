@@ -130,7 +130,7 @@ public class Mapa {
             grafoExpansionMinima.crearNuevoNodo(ciudad);
         }
         generarAristasGrafoExpansionMinima();
-        grafoExpansionMinima.generarCaminosVuelta();
+        //grafoExpansionMinima.generarCaminosVuelta();
     }
     
     public void convertirAGrafoDirigido(){
@@ -201,6 +201,8 @@ public class Mapa {
     public void borrarCaminos(){
         
     }
+    
+    
     
    
     /*

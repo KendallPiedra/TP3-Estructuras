@@ -7,8 +7,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Properties;
+import java.util.Set;
 
 /**
  *
@@ -143,13 +147,40 @@ public class Mapa {
         grafoExpansionMinima.generarCaminosVuelta();
     }
     //.cgfdñkjgfsdlkfjd{lhjdkgjsf
-    public void generarGrafoExpansionMinimaBienes(){
+    public void generarGrafoExpansionMinimaBienes2(){
         grafoExpansionMinima= new Grafo();
         for(Ciudad ciudad: ciudades){
             grafoExpansionMinima.crearNuevoNodo(ciudad);
         }
+    
         generarAristasGrafoExpansionMinimaBienes(grafoExpansionMinima.primero.dato);
-        
+    }
+    public void generarGrafoExpansionMinimaBienes(){    
+        Set<Ciudad> nodosIncluidos = new HashSet<>();
+        PriorityQueue<Camino> colaPrioridad = new PriorityQueue<>(Comparator.comparingInt(Camino::getBienes));
+        Ciudad nodoInicial = grafo.primero.dato;
+        grafoExpansionMinima.crearNuevoNodo(nodoInicial);
+        nodosIncluidos.add(nodoInicial);
+
+        for (Camino arista : nodoInicial.caminos) {
+            colaPrioridad.add(arista);
+        }
+
+        while (!colaPrioridad.isEmpty()) {
+            Camino aristaActual = colaPrioridad.poll();
+            Ciudad nodoDestino = aristaActual.destino;
+
+            if (!nodosIncluidos.contains(nodoDestino)) {
+                grafoExpansionMinima.crearNuevoNodo(nodoDestino);
+                nodosIncluidos.add(nodoDestino);
+                grafoExpansionMinima.annadirNuevaArista(aristaActual.origen, nodoDestino,aristaActual.ejercito,aristaActual.bienes,aristaActual.distancia);
+                
+                // Agregar las aristas del nodo de destino a la cola de prioridad
+                for (Camino arista : nodoDestino.caminos) {
+                    colaPrioridad.add(arista);
+                }
+            }
+        }
     }
     
     public String extraerCiudadMásCaminos(){

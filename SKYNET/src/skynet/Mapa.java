@@ -115,21 +115,7 @@ public class Mapa {
                 }
             }
         }
-    }
-//ESTOY IIMRPOVISANDO MUY FUERTEMENTE
-    public void generarAristasGrafoExpansionMinimaBienes(Ciudad actual){
-        List<Camino> caminos=actual.caminos;
-        if (actual.nodo.lista.listaVacia()){
-            grafoExpansionMinima.annadirNuevaArista(actual, actual.caminos.get(0).destino); //NO SE AGREGA PESO
-            actual.caminos.get(0).destino.setVisitado(true);
-        }
-        noSE(0);
-    }
-    
-    public int noSE(int n){
-        return n;
-    }
-//ESTOY IIMRPOVISANDO MUY FUERTEMENTE    
+    } 
     public void generarGrafo(){
         grafo= new Grafo();
         for(Ciudad ciudad: ciudades){

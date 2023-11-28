@@ -24,9 +24,9 @@ import java.util.Stack;
  */
 public class Mapa {
     //List<Camino> caminos= new ArrayList<>();
-    List<Ciudad> ciudades= new ArrayList<>();
-    Grafo grafo;
-    Grafo grafoExpansionMinima;
+    public List<Ciudad> ciudades= new ArrayList<>();
+    public Grafo grafo;
+    public Grafo grafoExpansionMinima;
 
     public Grafo getGrafo() {
         return grafo;

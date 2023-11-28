@@ -1,8 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package MiniInterfaz;
+
+import javax.swing.JOptionPane;
+import skynet.*;
 
 /**
  *
@@ -13,7 +13,9 @@ public class Interfaz extends javax.swing.JFrame {
     /**
      * Creates new form Interfaz
      */
+    Mapa mapa;
     public Interfaz() {
+        mapa=new Mapa();
         initComponents();
     }
 
@@ -26,21 +28,132 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jTextFieldNombreJason = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jButtonGenerarGrafo = new javax.swing.JButton();
+        jButtonBloquearBienes = new javax.swing.JButton();
+        jButtonDividirAlMundo = new javax.swing.JButton();
+        jButtonAniquilacionTotal = new javax.swing.JButton();
+        jButtonEuleriano = new javax.swing.JButton();
+        jButtonGrafoDirigido = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea = new javax.swing.JTextArea();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(124, 151, 169));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTextFieldNombreJason.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTextFieldNombreJason.setText("Ciudades6");
+        jPanel1.add(jTextFieldNombreJason, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 350, 40));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel1.setText("Nombre del Json:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 140, 20));
+
+        jButtonGenerarGrafo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonGenerarGrafo.setText("Generar Grafo");
+        jButtonGenerarGrafo.setBorder(null);
+        jButtonGenerarGrafo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonGenerarGrafo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGenerarGrafoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonGenerarGrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 200, 50));
+
+        jButtonBloquearBienes.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonBloquearBienes.setText("Bloquear Expansion Minima de Bienes");
+        jButtonBloquearBienes.setBorder(null);
+        jButtonBloquearBienes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonBloquearBienes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jButtonBloquearBienes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 480, 50));
+
+        jButtonDividirAlMundo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonDividirAlMundo.setText("Dividir el Mundo");
+        jButtonDividirAlMundo.setBorder(null);
+        jButtonDividirAlMundo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonDividirAlMundo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDividirAlMundoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonDividirAlMundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 270, 50));
+
+        jButtonAniquilacionTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonAniquilacionTotal.setText("Aniquilacion Total");
+        jButtonAniquilacionTotal.setBorder(null);
+        jButtonAniquilacionTotal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jButtonAniquilacionTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 190, 50));
+
+        jButtonEuleriano.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonEuleriano.setText("Red de un Solo Recorrido");
+        jButtonEuleriano.setBorder(null);
+        jButtonEuleriano.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jButtonEuleriano, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 480, 50));
+
+        jButtonGrafoDirigido.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonGrafoDirigido.setText("Convertir a Grafo Dirigido");
+        jButtonGrafoDirigido.setBorder(null);
+        jButtonGrafoDirigido.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jButtonGrafoDirigido, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 280, 50));
+
+        jPanel2.setBackground(new java.awt.Color(124, 151, 169));
+
+        jTextArea.setColumns(20);
+        jTextArea.setRows(5);
+        jScrollPane1.setViewportView(jTextArea);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 400, 530));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 910, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 530, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonGenerarGrafoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenerarGrafoActionPerformed
+        if(jTextFieldNombreJason.getText()!=""){
+            mapa.generarCiudades(jTextFieldNombreJason.getText()+".json");
+            mapa.generarGrafo();
+            jTextArea.setText(mapa.grafo.toString());
+        }else{
+            JOptionPane.showMessageDialog(null, "Ingrese el nombre del Json, por favor");
+        }
+    }//GEN-LAST:event_jButtonGenerarGrafoActionPerformed
+
+    private void jButtonDividirAlMundoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDividirAlMundoActionPerformed
+        
+    }//GEN-LAST:event_jButtonDividirAlMundoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +191,17 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonAniquilacionTotal;
+    private javax.swing.JButton jButtonBloquearBienes;
+    private javax.swing.JButton jButtonDividirAlMundo;
+    private javax.swing.JButton jButtonEuleriano;
+    private javax.swing.JButton jButtonGenerarGrafo;
+    private javax.swing.JButton jButtonGrafoDirigido;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea;
+    private javax.swing.JTextField jTextFieldNombreJason;
     // End of variables declaration//GEN-END:variables
 }

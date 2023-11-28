@@ -14,6 +14,13 @@ public class Camino { //(ARCOS)
     int ejercito, bienes, distancia;
     boolean visitado;
 
+    
+    
+    
+    
+    public Camino(Camino camino){
+        
+    }
     public Camino(String ciudad2, int ejercito, int bienes, int distancia) {
         this.ciudad2 = ciudad2;
         this.ejercito = ejercito;

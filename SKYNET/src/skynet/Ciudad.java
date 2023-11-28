@@ -23,7 +23,21 @@ public class Ciudad {
     }
     
 
+    public Ciudad(Ciudad ciudad) {
+        nombre = ciudad.nombre;
+        soldados = ciudad.soldados;
+        misiles = ciudad.misiles;
+        TEChLevel = ciudad.TEChLevel;
 
+        // Copiar la lista de caminos sin compartir referencias
+        if (ciudad.caminos != null) {
+            caminos = new ArrayList<>();
+            for (Camino camino : ciudad.caminos) {
+                Camino nuevoCamino = new Camino(camino);
+                caminos.add(nuevoCamino);
+            }
+        }
+    }
     
 
     public Ciudad(String nombre, int soldados, int misiles, int TEChLevel, List<Camino> caminitos) {

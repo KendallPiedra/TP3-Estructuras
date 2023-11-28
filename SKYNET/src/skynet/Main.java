@@ -1,7 +1,6 @@
 
 package skynet;
 
-import java.util.List;
 
 /**
  *
@@ -32,7 +31,6 @@ public class Main {
         System.out.println("=================================================");
         System.out.println(mapa.grafo.toString());
         System.out.println("=================================================");        
-        System.out.println("=================================================");
         /*
         mapa.convertirAGrafoDirigido();
 >>>>>>> Stashed changes

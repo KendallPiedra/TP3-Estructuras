@@ -17,7 +17,8 @@ public class Main {
         // TODO code application logic here
         
         Mapa mapa=new Mapa();
-        mapa.generarCiudades("Ciudades6E.json");
+        //mapa.generarCiudades("Ciudades10E.json");
+        mapa.generarCiudades("eule10.json");
         
         for(Ciudad ciudad:mapa.ciudades){
             System.out.println(ciudad.nombre);

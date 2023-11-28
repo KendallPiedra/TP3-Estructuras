@@ -1,0 +1,124 @@
+[
+  {
+    "nombre": "A",
+    "caminos": [
+      {
+        "ciudad2": "B"
+      },
+      {
+        "ciudad2": "C"
+      },
+      {
+        "ciudad2": "D"
+      }
+    ]
+  },
+  {
+    "nombre": "B",
+    "caminos": [
+      {
+        "ciudad2": "C"
+      },
+      {
+        "ciudad2": "E"
+      }
+    ]
+  },
+  {
+    "nombre": "C",
+    "caminos": [
+      {
+        "ciudad2": "D"
+      },
+      {
+        "ciudad2": "F"
+      }
+    ]
+  },
+  {
+    "nombre": "D",
+    "caminos": [
+      {
+        "ciudad2": "A"
+      },
+      {
+        "ciudad2": "F"
+      }
+    ]
+  },
+  {
+    "nombre": "E",
+    "caminos": [
+      {
+        "ciudad2": "B"
+      },
+      {
+        "ciudad2": "C"
+      }
+    ]
+  },
+  {
+    "nombre": "F",
+    "caminos": [
+      {
+        "ciudad2": "D"
+      },
+      {
+        "ciudad2": "E"
+      }
+    ]
+  },
+  {
+    "nombre": "G",
+    "caminos": [
+      {
+        "ciudad2": "H"
+      },
+      {
+        "ciudad2": "I"
+      },
+      {
+        "ciudad2": "J"
+      }
+    ]
+  },
+  {
+    "nombre": "H",
+    "caminos": [
+      {
+        "ciudad2": "I"
+      },
+      {
+        "ciudad2": "J"
+      }
+    ]
+  },
+  {
+    "nombre": "I",
+    "caminos": [
+      {
+        "ciudad2": "G"
+      },
+      {
+        "ciudad2": "H"
+      },
+      {
+        "ciudad2": "J"
+      }
+    ]
+  },
+  {
+    "nombre": "J",
+    "caminos": [
+      {
+        "ciudad2": "G"
+      },
+      {
+        "ciudad2": "H"
+      },
+      {
+        "ciudad2": "I"
+      }
+    ]
+  }
+]

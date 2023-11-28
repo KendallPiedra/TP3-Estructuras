@@ -12,13 +12,16 @@ public class Skynet {
     Mapa mapaSimulacion;
     
     public Skynet(Mapa _mapaReal){
-        mapaSimulacion=mapaReal=_mapaReal;
+        mapaSimulacion=new Mapa();
+        mapaReal=new Mapa();
+        mapaSimulacion.CopiarMapa(_mapaReal);
+        mapaReal.CopiarMapa(_mapaReal);
     }
     
     public void dividirAlMundo(){
         while(mapaSimulacion.getGrafo().esConexo()){
-            mapaReal.borrarCiudadDelMapa(mapaReal.grafo.encontrarCiudadConMasCaminos());
-            mapaReal.generarGrafo();
+            mapaSimulacion.borrarCiudadDelMapa(mapaSimulacion.grafo.encontrarCiudadConMasCaminos());
+            mapaSimulacion.generarGrafo();
         }
     }
     

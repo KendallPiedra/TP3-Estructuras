@@ -39,6 +39,12 @@ public class Mapa {
     
     public Mapa() {
     }
+    
+    public void CopiarMapa(Mapa mapa){
+        ciudades=mapa.getCiudades();
+        grafo=mapa.getGrafo();
+        grafoExpansionMinima=mapa.getGrafoExpansionMinima();
+    }
 /*
     public List<Camino> getCaminos() {
         return caminos;
@@ -48,6 +54,15 @@ public class Mapa {
         this.caminos = caminos;
     }
 */
+
+    public Grafo getGrafoExpansionMinima() {
+        return grafoExpansionMinima;
+    }
+
+    public void setGrafoExpansionMinima(Grafo grafoExpansionMinima) {
+        this.grafoExpansionMinima = grafoExpansionMinima;
+    }
+    
     public List<Ciudad> getCiudades() {
         return ciudades;
     }

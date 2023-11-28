@@ -89,7 +89,7 @@ public class Camino { //(ARCOS)
     }
     
     public Camino copiarCamino(Camino camino){
-        
+        return null;
     }
 
     @Override

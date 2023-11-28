@@ -17,6 +17,7 @@ public class Interfaz extends javax.swing.JFrame {
     Skynet skynet;
     public Interfaz() {
         mapa=new Mapa();
+        this.setLocationRelativeTo(this);
         initComponents();
     }
 
@@ -110,6 +111,11 @@ public class Interfaz extends javax.swing.JFrame {
         jButtonEuleriano.setText("Red de un Solo Recorrido");
         jButtonEuleriano.setBorder(null);
         jButtonEuleriano.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonEuleriano.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEulerianoActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButtonEuleriano, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 410, 40));
 
         jButtonGrafoDirigido.setBackground(new java.awt.Color(146, 178, 188));
@@ -271,8 +277,14 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonConfirmarCambiosActionPerformed
 
     private void jButtonGrafoDirigidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGrafoDirigidoActionPerformed
-        //skynet
+        skynet.dirigirGrafoXD();
+        jTextAreaExpansionMinima.setText(" ");
+        jTextAreaCambio.setText(skynet.mapaSimulacion.grafo.toString());
     }//GEN-LAST:event_jButtonGrafoDirigidoActionPerformed
+
+    private void jButtonEulerianoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEulerianoActionPerformed
+        
+    }//GEN-LAST:event_jButtonEulerianoActionPerformed
 
     /**
      * @param args the command line arguments

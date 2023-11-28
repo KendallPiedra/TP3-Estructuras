@@ -263,7 +263,10 @@ public class Grafo {
             }
             tmp=tmp.siguiente;
         }
-        return true;
+        if(impar!=2){
+            return true;
+        }
+        return false;
     }
 
    //============================================================================    

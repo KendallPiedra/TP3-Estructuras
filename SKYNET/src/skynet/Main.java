@@ -3,6 +3,7 @@ package skynet;
 
 import java.util.List;
 
+
 /**
  *
  * @author Usuario
@@ -44,11 +45,15 @@ public class Main {
             // Manejo de excepciones si ocurre algún problema durante la pausa
             e.printStackTrace();
         }
+        System.out.println("=================================================");        
+        
+        mapa.convertirAGrafoDirigido();
         System.out.println(mapa.grafo.esEuleriano());
         List<Ciudad> camino=mapa.grafo.obtenerCaminoEuleriano();
         for(Ciudad ciudad:camino){
             System.out.print(ciudad.nombre+"->");
         }
+        /*
         /*
         mapa.generarGrafoExpansionMinima();
         System.out.println("=================================================");

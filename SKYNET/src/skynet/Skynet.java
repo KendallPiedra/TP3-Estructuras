@@ -40,6 +40,9 @@ public class Skynet {
     public void hacerSimulacionReal(){
         mapaReal.CopiarMapa(mapaSimulacion);
     }
+    public void deshacerSimulacion(){
+        mapaSimulacion.CopiarMapa(mapaReal);
+    }
     
     
     

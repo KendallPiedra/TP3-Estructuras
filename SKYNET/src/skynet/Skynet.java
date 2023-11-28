@@ -106,7 +106,7 @@ public class Skynet {
         return ciudadesMasFrecuentes;
     }
     
-    public void eliminarNodosMasVisitadosRecorrido(){////////////ESTA SE TIENE QUE IMPLEMENTAAAAAR
+    public void eliminarNodosMasVisitadosRecorrido(){////////////ESTA SE TIENE QUE IMPLEMENTAAAAAR  (no la he probado)
         List<String> listaAEliminar = sacarListaMasFrecuentementeRecorrido();
         for(String ciudad: listaAEliminar){
             mapaSimulacion.borrarCiudadDelMapa(ciudad);

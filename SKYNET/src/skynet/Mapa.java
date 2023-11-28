@@ -190,7 +190,7 @@ public class Mapa {
         return ciudadMayor;
     }
     
-    public void borrarCiudadDelMapa(String nombreCiudad){
+    public String borrarCiudadDelMapa(String nombreCiudad){
         int i=0;
         for(Ciudad ciudad:ciudades){
             if(ciudad.getNombre().equals(nombreCiudad)){
@@ -200,6 +200,7 @@ public class Mapa {
         }
         ciudades.remove(i);
         generarGrafo();
+        return nombreCiudad;
     }
     
     public List<ListaAdyacencia> caminoMasEficiente(Ciudad origen, Ciudad destino) {

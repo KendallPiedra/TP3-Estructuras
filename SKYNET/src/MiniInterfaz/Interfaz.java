@@ -14,6 +14,7 @@ public class Interfaz extends javax.swing.JFrame {
      * Creates new form Interfaz
      */
     Mapa mapa;
+    Skynet skynet;
     public Interfaz() {
         mapa=new Mapa();
         initComponents();
@@ -146,6 +147,7 @@ public class Interfaz extends javax.swing.JFrame {
             mapa.generarCiudades(jTextFieldNombreJason.getText()+".json");
             mapa.generarGrafo();
             jTextArea.setText(mapa.grafo.toString());
+            skynet=new Skynet(mapa);
         }else{
             JOptionPane.showMessageDialog(null, "Ingrese el nombre del Json, por favor");
         }

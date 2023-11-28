@@ -1,6 +1,7 @@
 
 package skynet;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,11 +16,13 @@ public class Skynet {
         mapaSimulacion=mapaReal=_mapaReal;
     }
     
-    public void dividirAlMundo(){
+    public List<String> dividirAlMundo(){
+        List<String> nodosEliminados=new ArrayList<>();
         while(mapaSimulacion.getGrafo().esConexo()){
             mapaReal.borrarCiudadDelMapa(mapaReal.grafo.encontrarCiudadConMasCaminos());
             mapaReal.generarGrafo();
         }
+        return nodosEliminados;
     }
     
     public void bloquearArbolExpansionMinBienes(){

@@ -285,7 +285,11 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButtonEulerianoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEulerianoActionPerformed
         String camino =skynet.generarRedDeUnSoloRecorrido();
         jTextAreaExpansionMinima.setText(" ");
-        jTextAreaCambio.setText("Aniquilacion Total\nCamino Euleriano:\n"+camino);
+        if(camino.equalsIgnoreCase("No hay camino")){
+            jTextAreaCambio.setText("La aniquilación no es total\n"+camino);
+        }else{
+            jTextAreaCambio.setText("Aniquilacion Total\nCamino Euleriano:\n"+camino);
+        }
     }//GEN-LAST:event_jButtonEulerianoActionPerformed
 
     /**

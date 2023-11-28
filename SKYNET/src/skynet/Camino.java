@@ -80,6 +80,10 @@ public class Camino { //(ARCOS)
     public boolean isVisitado(){
         return visitado;
     }
+    
+    public Camino copiarCamino(Camino camino){
+        
+    }
 
     @Override
     public String toString() {

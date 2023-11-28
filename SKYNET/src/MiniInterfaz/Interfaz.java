@@ -259,7 +259,7 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButtonBloquearBienesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBloquearBienesActionPerformed
         skynet.bloquearArbolExpansionMinBienes();
-        jTextAreaExpansionMinima.setText(skynet.mapaReal.grafoExpansionMinima.toString());
+        jTextAreaExpansionMinima.setText(skynet.mapaSimulacion.grafoExpansionMinima.toString());
         jTextAreaCambio.setText(skynet.mapaSimulacion.grafo.toString());
     }//GEN-LAST:event_jButtonBloquearBienesActionPerformed
 
@@ -271,7 +271,7 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonConfirmarCambiosActionPerformed
 
     private void jButtonGrafoDirigidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGrafoDirigidoActionPerformed
-        skynet
+        //skynet
     }//GEN-LAST:event_jButtonGrafoDirigidoActionPerformed
 
     /**

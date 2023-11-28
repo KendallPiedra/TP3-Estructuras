@@ -276,6 +276,17 @@ public class Grafo {
         }
         System.out.println(toString());
     }
+    public void conectarGrafoDirigidoFuncional(){
+        
+        NodoGrafo temp=primero; 
+        while(temp!=null){
+            if(temp.lista.listaVacia()){
+                temp.lista.nuevaAdyacencia(temp.dato, retornarCiudadConMasCaminos().nodo.dato);
+            }
+            temp=temp.siguiente;
+        }
+        System.out.println(toString());
+    }
     
     
     public void generarCaminosVuelta(){

@@ -37,6 +37,21 @@ public class Skynet {
         }
     }
     
+    public String generarRedDeUnSoloRecorrido(){
+        List<Ciudad> camino=mapaSimulacion.grafo.obtenerCaminoEuleriano();
+        String salida="No hay camino";
+        boolean primero=true;
+        for(Ciudad ciudad:camino){
+            if(primero){
+                salida=ciudad.nombre;
+                primero=false;
+            }else{
+                salida+="\n->"+ciudad.nombre;
+            }     
+        }  
+        return salida;
+    } 
+    
     public void dirigirGrafoXD(){
         mapaSimulacion.convertirAGrafoDirigido();
     }

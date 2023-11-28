@@ -1,241 +1,241 @@
 [
   {
-    "Vertex": "A",
-    "Soldiers": 4000,
-    "Missiles": 3500,
-    "TechLevel": 4,
-    "Edges": [
+    "nombre": "A",
+    "soldados": 4000,
+    "misiles": 3500,
+    "TEChLevel": 4,
+    "caminos": [
       {
-        "ToVertex": "B",
-        "Military": 10,
-        "Goods": 10,
-        "Distances": 200
+        "ciudad2": "B",
+        "ejercito": 10,
+        "bienes": 10,
+        "distancia": 200
       },
       {
-        "ToVertex": "H",
-        "Military": 15,
-        "Goods": 10,
-        "Distances": 450
+        "ciudad2": "H",
+        "ejercito": 15,
+        "bienes": 10,
+        "distancia": 450
       },
       {
-        "ToVertex": "F",
-        "Military": 50,
-        "Goods": 50,
-        "Distances": 600
+        "ciudad2": "F",
+        "ejercito": 50,
+        "bienes": 50,
+        "distancia": 600
       }
     ]
   },
   {
-    "Vertex": "B",
-    "Soldiers": 90000,
-    "Missiles": 80000,
-    "TechLevel": 10,
-    "Edges": [
+    "nombre": "B",
+    "soldados": 90000,
+    "misiles": 80000,
+    "TEChLevel": 10,
+    "caminos": [
       {
-        "ToVertex": "A",
-        "Military": 10,
-        "Goods": 10,
-        "Distances": 200
+        "ciudad2": "A",
+        "ejercito": 10,
+        "bienes": 10,
+        "distancia": 200
       },
       {
-        "ToVertex": "C",
-        "Military": 20,
-        "Goods": 20,
-        "Distances": 250
+        "ciudad2": "C",
+        "ejercito": 20,
+        "bienes": 20,
+        "distancia": 250
       }
     ]
   },
   {
-    "Vertex": "C",
-    "Soldiers": 50000,
-    "Missiles": 30000,
-    "TechLevel": 8,
-    "Edges": [
+    "nombre": "C",
+    "soldados": 50000,
+    "misiles": 30000,
+    "TEChLevel": 8,
+    "caminos": [
       {
-        "ToVertex": "B",
-        "Military": 20,
-        "Goods": 20,
-        "Distances": 250
+        "ciudad2": "B",
+        "ejercito": 20,
+        "bienes": 20,
+        "distancia": 250
       },
       {
-        "ToVertex": "G",
-        "Military": 20,
-        "Goods": 30,
-        "Distances": 600
+        "ciudad2": "G",
+        "ejercito": 20,
+        "bienes": 30,
+        "distancia": 600
       },
       {
-        "ToVertex": "H",
-        "Military": 50,
-        "Goods": 50,
-        "Distances": 250
+        "ciudad2": "H",
+        "ejercito": 50,
+        "bienes": 50,
+        "distancia": 250
       },
       {
-        "ToVertex": "D",
-        "Military": 30,
-        "Goods": 30,
-        "Distances": 500
+        "ciudad2": "D",
+        "ejercito": 30,
+        "bienes": 30,
+        "distancia": 500
       }
     ]
   },
   {
-    "Vertex": "D",
-    "Soldiers": 20000,
-    "Missiles": 20000,
-    "TechLevel": 3,
-    "Edges": [
+    "nombre": "D",
+    "soldados": 20000,
+    "misiles": 20000,
+    "TEChLevel": 3,
+    "caminos": [
       {
-        "ToVertex": "C",
-        "Military": 30,
-        "Goods": 30,
-        "Distances": 500
+        "ciudad2": "C",
+        "ejercito": 30,
+        "bienes": 30,
+        "distancia": 500
       },
       {
-        "ToVertex": "H",
-        "Military": 5,
-        "Goods": 10,
-        "Distances": 100
+        "ciudad2": "H",
+        "ejercito": 5,
+        "bienes": 10,
+        "distancia": 100
       },
       {
-        "ToVertex": "E",
-        "Military": 30,
-        "Goods": 40,
-        "Distances": 100
+        "ciudad2": "E",
+        "ejercito": 30,
+        "bienes": 40,
+        "distancia": 100
       },
       {
-        "ToVertex": "I",
-        "Military": 20,
-        "Goods": 10,
-        "Distances": 150
+        "ciudad2": "I",
+        "ejercito": 20,
+        "bienes": 10,
+        "distancia": 150
       }
     ]
   },
   {
-    "Vertex": "E",
-    "Soldiers": 60000,
-    "Missiles": 70000,
-    "TechLevel": 7,
-    "Edges": [
+    "nombre": "E",
+    "soldados": 60000,
+    "misiles": 70000,
+    "TEChLevel": 7,
+    "caminos": [
       {
-        "ToVertex": "D",
-        "Military": 30,
-        "Goods": 40,
-        "Distances": 100
+        "ciudad2": "D",
+        "ejercito": 30,
+        "bienes": 40,
+        "distancia": 100
       },
       {
-        "ToVertex": "F",
-        "Military": 100,
-        "Goods": 100,
-        "Distances": 400
+        "ciudad2": "F",
+        "ejercito": 100,
+        "bienes": 100,
+        "distancia": 400
       },
       {
-        "ToVertex": "H",
-        "Military": 50,
-        "Goods": 100,
-        "Distances": 200
+        "ciudad2": "H",
+        "ejercito": 50,
+        "bienes": 100,
+        "distancia": 200
       },
       {
-        "ToVertex": "I",
-        "Military": 40,
-        "Goods": 50,
-        "Distances": 100
+        "ciudad2": "I",
+        "ejercito": 40,
+        "bienes": 50,
+        "distancia": 100
       }
     ]
   },
   {
-    "Vertex": "F",
-    "Soldiers": 60000,
-    "Missiles": 70000,
-    "TechLevel": 8,
-    "Edges": [
+    "nombre": "F",
+    "soldados": 60000,
+    "misiles": 70000,
+    "TEChLevel": 8,
+    "caminos": [
       {
-        "ToVertex": "A",
-        "Military": 50,
-        "Goods": 50,
-        "Distances": 600
+        "ciudad2": "A",
+        "ejercito": 50,
+        "bienes": 50,
+        "distancia": 600
       },
       {
-        "ToVertex": "E",
-        "Military": 100,
-        "Goods": 100,
-        "Distances": 400
+        "ciudad2": "E",
+        "ejercito": 100,
+        "bienes": 100,
+        "distancia": 400
       }
     ]
   },
   {
-    "Vertex": "G",
-    "Soldiers": 30000,
-    "Missiles": 30000,
-    "TechLevel": 7,
-    "Edges": [
+    "nombre": "G",
+    "soldados": 30000,
+    "misiles": 30000,
+    "TEChLevel": 7,
+    "caminos": [
       {
-        "ToVertex": "H",
-        "Military": 20,
-        "Goods": 10,
-        "Distances": 100
+        "ciudad2": "H",
+        "ejercito": 20,
+        "bienes": 10,
+        "distancia": 100
       },
       {
-        "ToVertex": "C",
-        "Military": 20,
-        "Goods": 30,
-        "Distances": 600
+        "ciudad2": "C",
+        "ejercito": 20,
+        "bienes": 30,
+        "distancia": 600
       }
     ]
   },
   {
-    "Vertex": "H",
-    "Soldiers": 40000,
-    "Missiles": 90000,
-    "TechLevel": 9,
-    "Edges": [
+    "nombre": "H",
+    "soldados": 40000,
+    "misiles": 90000,
+    "TEChLevel": 9,
+    "caminos": [
       {
-        "ToVertex": "C",
-        "Military": 50,
-        "Goods": 50,
-        "Distances": 250
+        "ciudad2": "C",
+        "ejercito": 50,
+        "bienes": 50,
+        "distancia": 250
       },
       {
-        "ToVertex": "G",
-        "Military": 20,
-        "Goods": 10,
-        "Distances": 100
+        "ciudad2": "G",
+        "ejercito": 20,
+        "bienes": 10,
+        "distancia": 100
       },
       {
-        "ToVertex": "E",
-        "Military": 50,
-        "Goods": 100,
-        "Distances": 200
+        "ciudad2": "E",
+        "ejercito": 50,
+        "bienes": 100,
+        "distancia": 200
       },
       {
-        "ToVertex": "D",
-        "Military": 5,
-        "Goods": 10,
-        "Distances": 100
+        "ciudad2": "D",
+        "ejercito": 5,
+        "bienes": 10,
+        "distancia": 100
       },
       {
-        "ToVertex": "A",
-        "Military": 15,
-        "Goods": 10,
-        "Distances": 450
+        "ciudad2": "A",
+        "ejercito": 15,
+        "bienes": 10,
+        "distancia": 450
       }
     ]
   },
   {
-    "Vertex": "I",
-    "Soldiers": 50000,
-    "Missiles": 80000,
-    "TechLevel": 6,
-    "Edges": [
+    "nombre": "I",
+    "soldados": 50000,
+    "misiles": 80000,
+    "TEChLevel": 6,
+    "caminos": [
       {
-        "ToVertex": "E",
-        "Military": 40,
-        "Goods": 50,
-        "Distances": 100
+        "ciudad2": "E",
+        "ejercito": 40,
+        "bienes": 50,
+        "distancia": 100
       },
       {
-        "ToVertex": "D",
-        "Military": 20,
-        "Goods": 10,
-        "Distances": 150
+        "ciudad2": "D",
+        "ejercito": 20,
+        "bienes": 10,
+        "distancia": 150
       }
     ]
   }

@@ -17,12 +17,12 @@ public class Main {
         // TODO code application logic here
         
         Mapa mapa=new Mapa();
-<<<<<<< Updated upstream
+
         //mapa.generarCiudades("Ciudades10E.json");
         mapa.generarCiudades("eule10.json");
-=======
+
         mapa.generarCiudades("Ciudades6.json");
->>>>>>> Stashed changes
+
         
         for(Ciudad ciudad:mapa.ciudades){
             System.out.println(ciudad.nombre);

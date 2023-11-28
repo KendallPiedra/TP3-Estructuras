@@ -35,7 +35,6 @@ public class Interfaz extends javax.swing.JFrame {
         jButtonGenerarGrafo = new javax.swing.JButton();
         jButtonBloquearBienes = new javax.swing.JButton();
         jButtonDividirAlMundo = new javax.swing.JButton();
-        jButtonAniquilacionTotal = new javax.swing.JButton();
         jButtonEuleriano = new javax.swing.JButton();
         jButtonGrafoDirigido = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
@@ -106,13 +105,6 @@ public class Interfaz extends javax.swing.JFrame {
         });
         jPanel1.add(jButtonDividirAlMundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 230, 40));
 
-        jButtonAniquilacionTotal.setBackground(new java.awt.Color(146, 178, 188));
-        jButtonAniquilacionTotal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButtonAniquilacionTotal.setText("Aniquilacion Total");
-        jButtonAniquilacionTotal.setBorder(null);
-        jButtonAniquilacionTotal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jButtonAniquilacionTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 170, 40));
-
         jButtonEuleriano.setBackground(new java.awt.Color(146, 178, 188));
         jButtonEuleriano.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonEuleriano.setText("Red de un Solo Recorrido");
@@ -125,7 +117,12 @@ public class Interfaz extends javax.swing.JFrame {
         jButtonGrafoDirigido.setText("Convertir a Grafo Dirigido");
         jButtonGrafoDirigido.setBorder(null);
         jButtonGrafoDirigido.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jButtonGrafoDirigido, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 230, 40));
+        jButtonGrafoDirigido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGrafoDirigidoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonGrafoDirigido, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 410, 40));
 
         jPanel2.setBackground(new java.awt.Color(124, 151, 169));
 
@@ -250,31 +247,32 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButtonDividirAlMundoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDividirAlMundoActionPerformed
         skynet.dividirAlMundo();
-        jTextAreaCambio.setText(skynet.mapaReal.grafo.toString());
+        jTextAreaCambio.setText(skynet.mapaSimulacion.grafo.toString());
     }//GEN-LAST:event_jButtonDividirAlMundoActionPerformed
 
     private void jButtonDeshacerCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeshacerCambiosActionPerformed
-        if(jTextFieldNombreJason.getText()!=""){
-            mapa.generarCiudades(jTextFieldNombreJason.getText()+".json");
-            mapa.generarGrafo(); //CAMBIAR
-            jTextArea.setText(skynet.mapaReal.grafo.toString());
-            jTextAreaCambio.setText(" ");
-            jTextAreaExpansionMinima.setText(" ");
-            skynet=new Skynet(mapa); //CAMBIAR
-        }else{
-            JOptionPane.showMessageDialog(null, "Ingrese el nombre del Json, por favor");
-        }
+        skynet.deshacerSimulacion();
+        jTextArea.setText(skynet.mapaReal.grafo.toString());
+        jTextAreaCambio.setText(" ");
+        jTextAreaExpansionMinima.setText(" ");
     }//GEN-LAST:event_jButtonDeshacerCambiosActionPerformed
 
     private void jButtonBloquearBienesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBloquearBienesActionPerformed
         skynet.bloquearArbolExpansionMinBienes();
         jTextAreaExpansionMinima.setText(skynet.mapaReal.grafoExpansionMinima.toString());
-        jTextAreaCambio.setText(skynet.mapaReal.grafo.toString());
+        jTextAreaCambio.setText(skynet.mapaSimulacion.grafo.toString());
     }//GEN-LAST:event_jButtonBloquearBienesActionPerformed
 
     private void jButtonConfirmarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfirmarCambiosActionPerformed
-        // TODO add your handling code here:
+        skynet.hacerSimulacionReal();
+        jTextArea.setText(skynet.mapaReal.grafo.toString());
+        jTextAreaCambio.setText(" ");
+        jTextAreaExpansionMinima.setText(" ");
     }//GEN-LAST:event_jButtonConfirmarCambiosActionPerformed
+
+    private void jButtonGrafoDirigidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGrafoDirigidoActionPerformed
+        skynet
+    }//GEN-LAST:event_jButtonGrafoDirigidoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -312,7 +310,6 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonAniquilacionTotal;
     private javax.swing.JButton jButtonBloquearBienes;
     private javax.swing.JButton jButtonConfirmarCambios;
     private javax.swing.JButton jButtonDeshacerCambios;

@@ -36,7 +36,10 @@ public class Skynet {
             mapaSimulacion.grafo.eliminarCamino(camino);
         }
     }
-    
+    public void eliminarElGrafo(){
+        mapaSimulacion=new Mapa();
+        
+    }
     public String generarRedDeUnSoloRecorrido(){
         List<Ciudad> camino=mapaSimulacion.grafo.obtenerCaminoEuleriano();
         String salida="No hay camino";
@@ -48,7 +51,11 @@ public class Skynet {
             }else{
                 salida+="\n->"+ciudad.nombre;
             }     
-        }  
+        }
+        
+        if(!primero){
+            eliminarElGrafo();
+        }
         return salida;
     } 
     

@@ -29,12 +29,16 @@ public class Skynet {
     }
     
     public void bloquearArbolExpansionMinBienes(){
-        mapaReal.generarGrafoExpansionMinimaBienes();
-        List<Camino> listaCaminos= mapaReal.grafoExpansionMinima.extraerTodosLosCaminos();
+        mapaSimulacion.generarGrafoExpansionMinimaBienes();
+        List<Camino> listaCaminos= mapaSimulacion.grafoExpansionMinima.extraerTodosLosCaminos();
         for(Camino camino: listaCaminos){
             //System.out.println(camino.toString()+"---------------------");
-            mapaReal.grafo.eliminarCamino(camino);
+            mapaSimulacion.grafo.eliminarCamino(camino);
         }
+    }
+    
+    public void hacerSimulacionReal(){
+        mapaReal.CopiarMapa(mapaSimulacion);
     }
     
     

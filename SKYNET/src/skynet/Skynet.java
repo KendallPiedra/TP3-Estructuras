@@ -22,14 +22,15 @@ public class Skynet {
     
     public List<String> dividirAlMundo(){
         List<String> nodosEliminados=new ArrayList<>();
+        if (!mapaSimulacion.getGrafo().esConexo()){
+            JOptionPane.showMessageDialog(null,"El mapa del mundo ya no es conexo");
+        }
         while(mapaSimulacion.getGrafo().esConexo()){
             mapaSimulacion.borrarCiudadDelMapa(mapaSimulacion.grafo.encontrarCiudadConMasCaminos());
             mapaSimulacion.generarGrafo();
         }
         
-        if (!mapaSimulacion.getGrafo().esConexo()){
-            JOptionPane.showMessageDialog(null,"El mapa del mundo ya no es conexo");
-        }
+
         return nodosEliminados;
     }
     

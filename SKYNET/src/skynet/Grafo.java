@@ -5,7 +5,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 import java.util.Stack;
 
 /**
@@ -98,15 +97,13 @@ public class Grafo {
         return listaCaminos;
     }
     
-    public int contarConexionesEnGrafoDirigido(){
+    public int contarConexionesEnGrafoDirigido(NodoGrafo nodo){
         int cantCaminos=0;
-        NodoGrafo tmp=primero;
-        
-            while(tmp!=null){
-                if(tmp.dato.nombre.equals()){
+        List<Camino> caminos=extraerTodosLosCaminos();
+            for(Camino camino:caminos){
+                if(camino.origen.nombre.equals(nodo.dato.nombre) || camino.destino.nombre.equals(nodo.dato.nombre) ){
                     cantCaminos++;
                 }
-                tmp=tmp.siguiente;
             }
         return cantCaminos;
     }
@@ -189,12 +186,6 @@ public class Grafo {
         return camino;
     }
     
-    
-    
-    
-    
-    
-    
     public void eliminarCamino(Camino camino){
         NodoGrafo temp=primero;
         while(temp.dato!=camino.origen){
@@ -207,7 +198,7 @@ public class Grafo {
         NodoGrafo tmp=primero;
         int impar=0;
         while(tmp!=null){
-            if(!Funciones.esPar(tmp.totalCaminos())&& impar>2){
+            if(!Funciones.esPar(contarConexionesEnGrafoDirigido(tmp))&& impar>2){
                 return false;
             }else{
                 impar++;
@@ -310,11 +301,9 @@ public class Grafo {
     
     public List<Ciudad> obtenerCaminoEuleriano() {
         List<Ciudad> caminos = new ArrayList<>();
-        /*
         if (!esEuleriano()) {
             return caminos;
         }
-        */
         Stack<Ciudad> pila = new Stack<>();
         Ciudad inicio = primero.dato; 
         pila.push(inicio);

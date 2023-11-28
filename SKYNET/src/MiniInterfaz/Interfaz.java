@@ -18,6 +18,7 @@ public class Interfaz extends javax.swing.JFrame {
     String json;
     public Interfaz() {
         mapa=new Mapa();
+        initComponents();
         this.setLocationRelativeTo(this);
         jButtonDividirAlMundo.setEnabled(false);
         jButtonDeshacerCambios.setEnabled(false);
@@ -26,7 +27,7 @@ public class Interfaz extends javax.swing.JFrame {
         jButtonDividirAlMundo.setEnabled(false);
         jButtonGrafoDirigido.setEnabled(false);
         jButtonEuleriano.setEnabled(false);
-        initComponents();
+        jButtonEulerianoEliminarNodo.setEnabled(false);
     }
 
     /**
@@ -60,6 +61,7 @@ public class Interfaz extends javax.swing.JFrame {
         jTextAreaExpansionMinima = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jButtonConfirmarCambios = new javax.swing.JButton();
+        jButtonEulerianoEliminarNodo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,7 +126,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButtonEulerianoActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonEuleriano, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 410, 40));
+        jPanel1.add(jButtonEuleriano, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 180, 210, 40));
 
         jButtonGrafoDirigido.setBackground(new java.awt.Color(146, 178, 188));
         jButtonGrafoDirigido.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -136,7 +138,7 @@ public class Interfaz extends javax.swing.JFrame {
                 jButtonGrafoDirigidoActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonGrafoDirigido, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 410, 40));
+        jPanel1.add(jButtonGrafoDirigido, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 190, 40));
 
         jPanel2.setBackground(new java.awt.Color(124, 151, 169));
 
@@ -234,6 +236,18 @@ public class Interfaz extends javax.swing.JFrame {
         });
         jPanel1.add(jButtonConfirmarCambios, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 190, 40));
 
+        jButtonEulerianoEliminarNodo.setBackground(new java.awt.Color(146, 178, 188));
+        jButtonEulerianoEliminarNodo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonEulerianoEliminarNodo.setText("Red de un Solo Recorrido: Eliminar Nodo Más Visitado");
+        jButtonEulerianoEliminarNodo.setBorder(null);
+        jButtonEulerianoEliminarNodo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonEulerianoEliminarNodo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEulerianoEliminarNodoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonEulerianoEliminarNodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 410, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -262,6 +276,7 @@ public class Interfaz extends javax.swing.JFrame {
             jButtonDividirAlMundo.setEnabled(true);
             jButtonGrafoDirigido.setEnabled(true);
             jButtonEuleriano.setEnabled(true);
+            jButtonEulerianoEliminarNodo.setEnabled(true);
         }else{
             JOptionPane.showMessageDialog(null, "Ingrese el nombre del Json, por favor");
         }
@@ -279,6 +294,14 @@ public class Interfaz extends javax.swing.JFrame {
         jTextAreaCambio.setText(" ");
         jTextAreaExpansionMinima.setText(" ");
         skynet=new Skynet(mapa);
+        jButtonDividirAlMundo.setEnabled(true);
+        jButtonDeshacerCambios.setEnabled(true);
+        jButtonBloquearBienes.setEnabled(true);
+        jButtonConfirmarCambios.setEnabled(true);
+        jButtonDividirAlMundo.setEnabled(true);
+        jButtonGrafoDirigido.setEnabled(true);
+        jButtonEuleriano.setEnabled(true);
+        jButtonEulerianoEliminarNodo.setEnabled(true);
     }//GEN-LAST:event_jButtonDeshacerCambiosActionPerformed
 
     private void jButtonBloquearBienesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBloquearBienesActionPerformed
@@ -307,8 +330,21 @@ public class Interfaz extends javax.swing.JFrame {
             jTextAreaCambio.setText("La aniquilación no es total\n"+camino);
         }else{
             jTextAreaCambio.setText("Aniquilacion Total\nCamino Euleriano:\n"+camino);
+            jButtonDividirAlMundo.setEnabled(false);
+            jButtonBloquearBienes.setEnabled(false);
+            jButtonDividirAlMundo.setEnabled(false);
+            jButtonGrafoDirigido.setEnabled(false);
+            jButtonEuleriano.setEnabled(false);
+            jButtonEulerianoEliminarNodo.setEnabled(false);
         }
     }//GEN-LAST:event_jButtonEulerianoActionPerformed
+
+    private void jButtonEulerianoEliminarNodoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEulerianoEliminarNodoActionPerformed
+        String red=skynet.generarRedDeUnSoloRecorridoSinAniquilacion();
+        String eliminados=skynet.eliminarNodosMasVisitadosRecorrido();
+        jTextAreaExpansionMinima.setText(" ");
+        jTextAreaCambio.setText(red+eliminados);
+    }//GEN-LAST:event_jButtonEulerianoEliminarNodoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -351,6 +387,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton jButtonDeshacerCambios;
     private javax.swing.JButton jButtonDividirAlMundo;
     private javax.swing.JButton jButtonEuleriano;
+    private javax.swing.JButton jButtonEulerianoEliminarNodo;
     private javax.swing.JButton jButtonGenerarGrafo;
     private javax.swing.JButton jButtonGrafoDirigido;
     private javax.swing.JLabel jLabel1;

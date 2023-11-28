@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package skynet;
 
 /**
@@ -25,7 +22,14 @@ public class fgfff {
         System.out.println("===============LINEA DIVISORA===============");
         System.out.println(SKINEY.mapaSimulacion.grafo.toString());
         System.out.println("====================================LINEA DIVISORA GRAAAAANDE===================================");
+
         System.out.println(SKINEY.generarRedDeUnSoloRecorrido());
+
+        System.out.println(SKINEY.generarRedDeUnSoloRecorridoSinAniquilacion());
+        SKINEY.eliminarNodosMasVisitadosRecorrido();
+        System.out.println("===============LINEA DIVISORA===============");
+        System.out.println(SKINEY.mapaSimulacion.grafo.toString());
+
         SKINEY.eliminarNodosMasVisitadosRecorrido();
         System.out.println("===============LINEA DIVISORA===============");
         System.out.println(SKINEY.mapaSimulacion.grafo.toString());

@@ -69,6 +69,21 @@ public class Skynet {
         return salida;
     } 
     
+    public String generarRedDeUnSoloRecorridoSinAniquilacion(){
+        List<Ciudad> camino=mapaSimulacion.grafo.obtenerCaminoEuleriano();
+        String salida="No hay camino";
+        boolean primero=true;
+        for(Ciudad ciudad:camino){
+            if(primero){
+                salida=ciudad.nombre;
+                primero=false;
+            }else{
+                salida+="\n->"+ciudad.nombre;
+            }     
+        }
+        return salida;
+    } 
+    
     public void dirigirGrafoXD(){
         mapaSimulacion.convertirAGrafoDirigido();
     }
@@ -105,13 +120,16 @@ public class Skynet {
         return ciudadesMasFrecuentes;
     }
     
-    public void eliminarNodosMasVisitadosRecorrido(){////////////ESTA SE TIENE QUE IMPLEMENTAAAAAR  (no la he probado)
+    public String eliminarNodosMasVisitadosRecorrido(){////////////ESTA SE TIENE QUE IMPLEMENTAAAAAR  (no la he probado)
         List<String> listaAEliminar = sacarListaMasFrecuentementeRecorrido();
+        String eliminados="";
         for(String ciudad: listaAEliminar){
-            System.out.println("Elimino: "+ciudad);
+            eliminados+="\nElimino: "+ciudad;
             mapaSimulacion.borrarCiudadDelMapa(ciudad);
         }
+        return eliminados;
     }
+    
     public void hacerSimulacionReal(){
         mapaReal.CopiarMapa(mapaSimulacion);
     }

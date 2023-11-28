@@ -15,9 +15,17 @@ public class Interfaz extends javax.swing.JFrame {
      */
     Mapa mapa;
     Skynet skynet;
+    String json;
     public Interfaz() {
         mapa=new Mapa();
         this.setLocationRelativeTo(this);
+        jButtonDividirAlMundo.setEnabled(false);
+        jButtonDeshacerCambios.setEnabled(false);
+        jButtonBloquearBienes.setEnabled(false);
+        jButtonConfirmarCambios.setEnabled(false);
+        jButtonDividirAlMundo.setEnabled(false);
+        jButtonGrafoDirigido.setEnabled(false);
+        jButtonEuleriano.setEnabled(false);
         initComponents();
     }
 
@@ -243,9 +251,17 @@ public class Interfaz extends javax.swing.JFrame {
     private void jButtonGenerarGrafoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenerarGrafoActionPerformed
         if(jTextFieldNombreJason.getText()!=""){
             mapa.generarCiudades(jTextFieldNombreJason.getText()+".json");
+            json=jTextFieldNombreJason.getText();
             mapa.generarGrafo();
             jTextArea.setText(mapa.grafo.toString());
             skynet=new Skynet(mapa);
+            jButtonDividirAlMundo.setEnabled(true);
+            jButtonDeshacerCambios.setEnabled(true);
+            jButtonBloquearBienes.setEnabled(true);
+            jButtonConfirmarCambios.setEnabled(true);
+            jButtonDividirAlMundo.setEnabled(true);
+            jButtonGrafoDirigido.setEnabled(true);
+            jButtonEuleriano.setEnabled(true);
         }else{
             JOptionPane.showMessageDialog(null, "Ingrese el nombre del Json, por favor");
         }
@@ -257,10 +273,12 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonDividirAlMundoActionPerformed
 
     private void jButtonDeshacerCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeshacerCambiosActionPerformed
-        skynet.deshacerSimulacion();
-        jTextArea.setText(skynet.mapaReal.grafo.toString());
+        mapa.generarCiudades(json+".json");
+        mapa.generarGrafo();
+        jTextArea.setText(mapa.grafo.toString());
         jTextAreaCambio.setText(" ");
         jTextAreaExpansionMinima.setText(" ");
+        skynet=new Skynet(mapa);
     }//GEN-LAST:event_jButtonDeshacerCambiosActionPerformed
 
     private void jButtonBloquearBienesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBloquearBienesActionPerformed

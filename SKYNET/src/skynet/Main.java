@@ -31,9 +31,7 @@ public class Main {
         
         System.out.println("=================================================");
         System.out.println(mapa.grafo.toString());
-<<<<<<< Updated upstream
         System.out.println("=================================================");        
-=======
         System.out.println("=================================================");
         /*
         mapa.convertirAGrafoDirigido();

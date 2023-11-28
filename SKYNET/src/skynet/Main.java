@@ -31,7 +31,13 @@ public class Main {
         
         System.out.println("=================================================");
         System.out.println(mapa.grafo.toString());
+<<<<<<< Updated upstream
         System.out.println("=================================================");        
+=======
+        System.out.println("=================================================");
+        /*
+        mapa.convertirAGrafoDirigido();
+>>>>>>> Stashed changes
         System.out.println(mapa.grafo.esEuleriano());
         List<Ciudad> camino=mapa.grafo.obtenerCaminoEuleriano();
         for(Ciudad ciudad:camino){
@@ -54,15 +60,15 @@ public class Main {
 
 
 
-        
+        */
         
         System.out.println("PRUEBAAAAAASSSSSSSSS");
         Mapa mapa2=new Mapa();
-        mapa2.generarCiudades("Ciudades6.json");
+        mapa2.generarCiudades("Ciudades30.json");
         mapa2.generarGrafo();
         
         mapa2.convertirAGrafoDirigido(); 
-        */
+        
     }
 
 }

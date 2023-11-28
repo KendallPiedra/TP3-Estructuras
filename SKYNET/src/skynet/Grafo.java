@@ -172,6 +172,21 @@ public class Grafo {
         }
         return camino;
     }
+    public String encontrarCiudadConMenosCaminos(){
+        NodoGrafo temp =primero;
+        int minCaminos=10000;
+        String camino="NO HAY CAMINO";
+        while (temp!=null){
+            if (temp.totalCaminos()<minCaminos){
+                minCaminos=temp.totalCaminos();
+                camino= temp.dato.nombre;
+            }
+            temp=temp.siguiente;
+        }
+        return camino;
+    }
+    
+    
     public Ciudad retornarCiudadConMasCaminos(){
         NodoGrafo temp =primero;
         int maxCaminos=0;
@@ -179,6 +194,49 @@ public class Grafo {
         while (temp!=null){
             if (temp.totalCaminos()>maxCaminos){
                 maxCaminos=temp.totalCaminos();
+                camino= temp.dato;
+            }
+            temp=temp.siguiente;
+        }
+        return camino;
+    }
+    public Ciudad retornarCiudadConMenosCaminos(){
+        NodoGrafo temp =primero;
+        int minCaminos=10000;
+        Ciudad camino=temp.dato;
+        while (temp!=null){
+            if (temp.totalCaminos()<minCaminos){
+                minCaminos=temp.totalCaminos();
+                camino= temp.dato;
+            }
+            temp=temp.siguiente;
+        }
+        return camino;
+    }
+    
+    public int sacarCantidadDeCaminosDirigidosAUnaCiudad(NodoGrafo nodo){
+        return sacarListaDeCiudadesDirigidas(nodo).size();
+    }
+    public Ciudad retornarCiudadConMenosCaminosConExcepcion(Ciudad excepcion){
+        NodoGrafo temp =primero;
+        int minCaminos=10000;
+        Ciudad camino=temp.dato;
+        while (temp!=null){
+            if (temp.totalCaminos()<minCaminos&&!temp.dato.nombre.equals(excepcion.nombre)){
+                minCaminos=temp.totalCaminos();
+                camino= temp.dato;
+            }
+            temp=temp.siguiente;
+        }
+        return camino;
+    }
+    public Ciudad retornarCiudadConMenosCaminosDirigidosAConExcepcion(Ciudad excepcion){
+        NodoGrafo temp =primero;
+        int minCaminos=10000;
+        Ciudad camino=temp.dato;
+        while (temp!=null){
+            if (sacarCantidadDeCaminosDirigidosAUnaCiudad(temp)<minCaminos&&!temp.dato.nombre.equals(excepcion.nombre)){
+                minCaminos=sacarCantidadDeCaminosDirigidosAUnaCiudad(temp);
                 camino= temp.dato;
             }
             temp=temp.siguiente;
@@ -220,6 +278,7 @@ public class Grafo {
     /**
      *  Saca las ciudades que se dirigen a la ciudad puesta como parametro
      * @param nodo
+     * @return 
      */
     public List<Ciudad> sacarListaDeCiudadesDirigidas(NodoGrafo nodo){
         List<Ciudad>listaCiudades=new ArrayList<>();
@@ -268,11 +327,13 @@ public class Grafo {
         System.out.println(toString());
     }
     public void conectarGrafoDirigidoFuncional(){
-        
+        System.out.println(toString());
+        System.out.println("===================================================");
+
         NodoGrafo temp=primero; 
         while(temp!=null){
             if(temp.lista.listaVacia()){
-                temp.lista.nuevaAdyacencia(temp.dato, retornarCiudadConMasCaminos().nodo.dato);
+                temp.lista.nuevaAdyacencia(temp.dato, retornarCiudadConMenosCaminosDirigidosAConExcepcion(temp.dato).nodo.dato);
             }
             temp=temp.siguiente;
         }

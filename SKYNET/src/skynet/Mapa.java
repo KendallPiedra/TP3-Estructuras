@@ -140,7 +140,7 @@ public class Mapa {
     public void convertirAGrafoDirigido(){
         generarGrafoExpansionMinima();
         grafo=grafoExpansionMinima;
-        grafo.conectarGrafoDirigido();
+        grafo.conectarGrafoDirigidoFuncional();
     }
     //.cgfdñkjgfsdlkfjd{lhjdkgjsf
     

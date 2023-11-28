@@ -38,6 +38,7 @@ public class Skynet {
     }
     public void eliminarElGrafo(){
         mapaSimulacion=new Mapa();
+        mapaSimulacion.generarGrafo();
         
     }
     public String generarRedDeUnSoloRecorrido(){

@@ -35,28 +35,41 @@ public class Interfaz extends javax.swing.JFrame {
         jButtonGenerarGrafo = new javax.swing.JButton();
         jButtonBloquearBienes = new javax.swing.JButton();
         jButtonDividirAlMundo = new javax.swing.JButton();
-        jButtonAniquilacionTotal = new javax.swing.JButton();
         jButtonEuleriano = new javax.swing.JButton();
         jButtonGrafoDirigido = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea = new javax.swing.JTextArea();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextAreaCambio = new javax.swing.JTextArea();
+        jLabel4 = new javax.swing.JLabel();
+        jButtonDeshacerCambios = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextAreaCambio1 = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextAreaExpansionMinima = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
+        jButtonConfirmarCambios = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(124, 151, 169));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTextFieldNombreJason.setBackground(new java.awt.Color(102, 102, 102));
         jTextFieldNombreJason.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jTextFieldNombreJason.setForeground(new java.awt.Color(204, 204, 204));
         jTextFieldNombreJason.setText("Ciudades6");
-        jPanel1.add(jTextFieldNombreJason, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 350, 40));
+        jPanel1.add(jTextFieldNombreJason, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 280, 40));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel1.setText("Nombre del Json:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 140, 20));
+        jLabel1.setText("Arbol de Expansion Minima de Bienes");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 360, 20));
 
-        jButtonGenerarGrafo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonGenerarGrafo.setBackground(new java.awt.Color(146, 178, 188));
+        jButtonGenerarGrafo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonGenerarGrafo.setText("Generar Grafo");
         jButtonGenerarGrafo.setBorder(null);
         jButtonGenerarGrafo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -65,16 +78,23 @@ public class Interfaz extends javax.swing.JFrame {
                 jButtonGenerarGrafoActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonGenerarGrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 200, 50));
+        jPanel1.add(jButtonGenerarGrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 170, 40));
 
-        jButtonBloquearBienes.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonBloquearBienes.setBackground(new java.awt.Color(146, 178, 188));
+        jButtonBloquearBienes.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonBloquearBienes.setText("Bloquear Expansion Minima de Bienes");
         jButtonBloquearBienes.setBorder(null);
         jButtonBloquearBienes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonBloquearBienes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jButtonBloquearBienes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 480, 50));
+        jButtonBloquearBienes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBloquearBienesActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonBloquearBienes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 410, 40));
 
-        jButtonDividirAlMundo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonDividirAlMundo.setBackground(new java.awt.Color(146, 178, 188));
+        jButtonDividirAlMundo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonDividirAlMundo.setText("Dividir el Mundo");
         jButtonDividirAlMundo.setBorder(null);
         jButtonDividirAlMundo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -83,50 +103,122 @@ public class Interfaz extends javax.swing.JFrame {
                 jButtonDividirAlMundoActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonDividirAlMundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 270, 50));
+        jPanel1.add(jButtonDividirAlMundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 230, 40));
 
-        jButtonAniquilacionTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jButtonAniquilacionTotal.setText("Aniquilacion Total");
-        jButtonAniquilacionTotal.setBorder(null);
-        jButtonAniquilacionTotal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jButtonAniquilacionTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 190, 50));
-
-        jButtonEuleriano.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonEuleriano.setBackground(new java.awt.Color(146, 178, 188));
+        jButtonEuleriano.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonEuleriano.setText("Red de un Solo Recorrido");
         jButtonEuleriano.setBorder(null);
         jButtonEuleriano.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jButtonEuleriano, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 480, 50));
+        jPanel1.add(jButtonEuleriano, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 410, 40));
 
-        jButtonGrafoDirigido.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButtonGrafoDirigido.setBackground(new java.awt.Color(146, 178, 188));
+        jButtonGrafoDirigido.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButtonGrafoDirigido.setText("Convertir a Grafo Dirigido");
         jButtonGrafoDirigido.setBorder(null);
         jButtonGrafoDirigido.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jButtonGrafoDirigido, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 280, 50));
+        jButtonGrafoDirigido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGrafoDirigidoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonGrafoDirigido, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 410, 40));
 
         jPanel2.setBackground(new java.awt.Color(124, 151, 169));
 
+        jTextArea.setBackground(new java.awt.Color(102, 102, 102));
         jTextArea.setColumns(20);
+        jTextArea.setForeground(new java.awt.Color(204, 204, 204));
         jTextArea.setRows(5);
         jScrollPane1.setViewportView(jTextArea);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel3.setText("Cambio Realizado");
+
+        jTextAreaCambio.setBackground(new java.awt.Color(102, 102, 102));
+        jTextAreaCambio.setColumns(20);
+        jTextAreaCambio.setForeground(new java.awt.Color(204, 204, 204));
+        jTextAreaCambio.setRows(5);
+        jScrollPane2.setViewportView(jTextAreaCambio);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel4.setText("Grafo Original");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(81, 81, 81)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 490, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 400, 530));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 790, 650));
+
+        jButtonDeshacerCambios.setBackground(new java.awt.Color(146, 178, 188));
+        jButtonDeshacerCambios.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonDeshacerCambios.setText("Deshacer Simulación");
+        jButtonDeshacerCambios.setBorder(null);
+        jButtonDeshacerCambios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDeshacerCambiosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonDeshacerCambios, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 210, 40));
+
+        jTextAreaCambio1.setColumns(20);
+        jTextAreaCambio1.setRows(5);
+        jScrollPane3.setViewportView(jTextAreaCambio1);
+
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 370, 490));
+
+        jTextAreaExpansionMinima.setBackground(new java.awt.Color(102, 102, 102));
+        jTextAreaExpansionMinima.setColumns(20);
+        jTextAreaExpansionMinima.setForeground(new java.awt.Color(204, 204, 204));
+        jTextAreaExpansionMinima.setRows(5);
+        jScrollPane4.setViewportView(jTextAreaExpansionMinima);
+
+        jPanel1.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 354, 410, 280));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel2.setText("Nombre del Json:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 140, 20));
+
+        jButtonConfirmarCambios.setBackground(new java.awt.Color(146, 178, 188));
+        jButtonConfirmarCambios.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButtonConfirmarCambios.setText("Confirmar Cambios");
+        jButtonConfirmarCambios.setBorder(null);
+        jButtonConfirmarCambios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConfirmarCambiosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonConfirmarCambios, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 190, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -136,7 +228,7 @@ public class Interfaz extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 653, Short.MAX_VALUE)
         );
 
         pack();
@@ -155,7 +247,32 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jButtonDividirAlMundoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDividirAlMundoActionPerformed
         skynet.dividirAlMundo();
+        jTextAreaCambio.setText(skynet.mapaSimulacion.grafo.toString());
     }//GEN-LAST:event_jButtonDividirAlMundoActionPerformed
+
+    private void jButtonDeshacerCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeshacerCambiosActionPerformed
+        skynet.deshacerSimulacion();
+        jTextArea.setText(skynet.mapaReal.grafo.toString());
+        jTextAreaCambio.setText(" ");
+        jTextAreaExpansionMinima.setText(" ");
+    }//GEN-LAST:event_jButtonDeshacerCambiosActionPerformed
+
+    private void jButtonBloquearBienesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBloquearBienesActionPerformed
+        skynet.bloquearArbolExpansionMinBienes();
+        jTextAreaExpansionMinima.setText(skynet.mapaReal.grafoExpansionMinima.toString());
+        jTextAreaCambio.setText(skynet.mapaSimulacion.grafo.toString());
+    }//GEN-LAST:event_jButtonBloquearBienesActionPerformed
+
+    private void jButtonConfirmarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfirmarCambiosActionPerformed
+        skynet.hacerSimulacionReal();
+        jTextArea.setText(skynet.mapaReal.grafo.toString());
+        jTextAreaCambio.setText(" ");
+        jTextAreaExpansionMinima.setText(" ");
+    }//GEN-LAST:event_jButtonConfirmarCambiosActionPerformed
+
+    private void jButtonGrafoDirigidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGrafoDirigidoActionPerformed
+        skynet
+    }//GEN-LAST:event_jButtonGrafoDirigidoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,17 +310,27 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonAniquilacionTotal;
     private javax.swing.JButton jButtonBloquearBienes;
+    private javax.swing.JButton jButtonConfirmarCambios;
+    private javax.swing.JButton jButtonDeshacerCambios;
     private javax.swing.JButton jButtonDividirAlMundo;
     private javax.swing.JButton jButtonEuleriano;
     private javax.swing.JButton jButtonGenerarGrafo;
     private javax.swing.JButton jButtonGrafoDirigido;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextArea jTextArea;
+    private javax.swing.JTextArea jTextAreaCambio;
+    private javax.swing.JTextArea jTextAreaCambio1;
+    private javax.swing.JTextArea jTextAreaExpansionMinima;
     private javax.swing.JTextField jTextFieldNombreJason;
     // End of variables declaration//GEN-END:variables
 }

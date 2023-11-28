@@ -9,8 +9,8 @@ import java.util.List;
  * @author Usuario
  */
 public class Skynet {
-    Mapa mapaReal;
-    Mapa mapaSimulacion;
+    public Mapa mapaReal;
+    public Mapa mapaSimulacion;
     
     public Skynet(Mapa _mapaReal){
         mapaSimulacion=new Mapa();

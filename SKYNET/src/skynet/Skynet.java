@@ -37,6 +37,10 @@ public class Skynet {
         }
     }
     
+    public void dirigirGrafoXD(){
+        mapaSimulacion.convertirAGrafoDirigido();
+    }
+    
     public void hacerSimulacionReal(){
         mapaReal.CopiarMapa(mapaSimulacion);
     }

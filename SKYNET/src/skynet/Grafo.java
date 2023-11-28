@@ -34,6 +34,11 @@ public class Grafo {
         return false;
     }
     
+    
+    public void copiarGrafo(Grafo grafo){
+        
+    }
+    
     public void annadirNuevaArista(Ciudad origen, Ciudad destino, int ejercito, int bienes, int distancia){
         if(existeVertice(origen)&&existeVertice(destino)){
             NodoGrafo posicion=primero;

@@ -154,7 +154,7 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonGenerarGrafoActionPerformed
 
     private void jButtonDividirAlMundoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDividirAlMundoActionPerformed
-        
+        skynet.dividirAlMundo();
     }//GEN-LAST:event_jButtonDividirAlMundoActionPerformed
 
     /**

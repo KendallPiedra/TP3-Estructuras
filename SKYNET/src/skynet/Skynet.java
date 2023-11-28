@@ -2,7 +2,10 @@
 package skynet;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import javax.swing.JOptionPane;
 
 /**
@@ -69,7 +72,45 @@ public class Skynet {
     public void dirigirGrafoXD(){
         mapaSimulacion.convertirAGrafoDirigido();
     }
+    public List<String> sacarListaMasFrecuentementeRecorrido() {
+        List<Ciudad> camino = mapaSimulacion.grafo.obtenerCaminoEuleriano();
+
+        // Crear un HashMap para contar la frecuencia de cada nombre de ciudad
+        Map<String, Integer> frecuenciaCiudades = new HashMap<>();
+
+        // Contar la frecuencia de cada nombre de ciudad en el camino
+        for (Ciudad ciudad : camino) {
+            String nombreCiudad = ciudad.nombre;
+            frecuenciaCiudades.put(nombreCiudad, frecuenciaCiudades.getOrDefault(nombreCiudad, 0) + 1);
+        }
+
+        // Encontrar la frecuencia máxima
+        int frecuenciaMaxima = 0;
+
+        for (int frecuencia : frecuenciaCiudades.values()) {
+            frecuenciaMaxima = Math.max(frecuenciaMaxima, frecuencia);
+        }
+
+        // Encontrar las ciudades más frecuentes
+        List<String> ciudadesMasFrecuentes = new LinkedList<>();
+
+        for (Map.Entry<String, Integer> entry : frecuenciaCiudades.entrySet()) {
+            String nombreCiudad = entry.getKey();
+            int frecuencia = entry.getValue();
+
+            if (frecuencia == frecuenciaMaxima) {
+                ciudadesMasFrecuentes.add(nombreCiudad);
+            }
+        }
+        return ciudadesMasFrecuentes;
+    }
     
+    public void eliminarNodosMasVisitadosRecorrido(){////////////ESTA SE TIENE QUE IMPLEMENTAAAAAR  (no la he probado)
+        List<String> listaAEliminar = sacarListaMasFrecuentementeRecorrido();
+        for(String ciudad: listaAEliminar){
+            mapaSimulacion.borrarCiudadDelMapa(ciudad);
+        }
+    }
     public void hacerSimulacionReal(){
         mapaReal.CopiarMapa(mapaSimulacion);
     }

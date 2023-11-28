@@ -22,10 +22,14 @@ public class fgfff {
         System.out.println("===============LINEA DIVISORA===============");
         System.out.println(SKINEY.mapaSimulacion.grafo.toString());
         System.out.println("====================================LINEA DIVISORA GRAAAAANDE===================================");
+
+        System.out.println(SKINEY.generarRedDeUnSoloRecorrido());
+
         System.out.println(SKINEY.generarRedDeUnSoloRecorridoSinAniquilacion());
         SKINEY.eliminarNodosMasVisitadosRecorrido();
         System.out.println("===============LINEA DIVISORA===============");
         System.out.println(SKINEY.mapaSimulacion.grafo.toString());
+
         SKINEY.eliminarNodosMasVisitadosRecorrido();
         System.out.println("===============LINEA DIVISORA===============");
         System.out.println(SKINEY.mapaSimulacion.grafo.toString());

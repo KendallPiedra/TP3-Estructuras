@@ -108,6 +108,21 @@ public class Grafo {
         return cantCaminos;
     }
     
+    public boolean tieneParejasDeCaminos(NodoGrafo nodo){
+        int cantCaminosEntrada=0;
+        int cantCaminosSalida=0;
+        List<Camino> caminos=extraerTodosLosCaminos();
+            for(Camino camino:caminos){
+                if(camino.origen.nombre.equals(nodo.dato.nombre) ){
+                    cantCaminosSalida++;
+                }
+                if(camino.destino.nombre.equals(nodo.dato.nombre)){
+                    cantCaminosEntrada++;
+                }
+            }
+        return cantCaminosEntrada==cantCaminosSalida;
+    }
+    
     public boolean esConexo() {
         if (estaVacio()) {
             // Grafo vacío, considerado conexo por definición.
@@ -251,21 +266,22 @@ public class Grafo {
         }
         temp.lista.eliminarAdyacencia(camino.destino);
     }
-    
-    public boolean esEuleriano(){
-        NodoGrafo tmp=primero;
-        int impar=0;
-        while(tmp!=null){
-            if(!Funciones.esPar(contarConexionesEnGrafoDirigido(tmp))&& impar>2){
-                return false;
-            }else{
+
+    public boolean esEuleriano() {
+        NodoGrafo tmp = primero;
+        int impar = 0;
+
+        while (tmp != null) {
+            int conexiones = contarConexionesEnGrafoDirigido(tmp);
+            if (conexiones % 2 != 0) {
                 impar++;
+                if (impar > 2 || !tieneParejasDeCaminos(tmp)) {
+                    return false;
+                }
             }
-            tmp=tmp.siguiente;
+            tmp = tmp.siguiente;
         }
-        if(impar!=2){
-            return false;
-        }
+
         return true;
     }
 

@@ -3,6 +3,7 @@ package skynet;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -24,6 +25,10 @@ public class Skynet {
         while(mapaSimulacion.getGrafo().esConexo()){
             mapaSimulacion.borrarCiudadDelMapa(mapaSimulacion.grafo.encontrarCiudadConMasCaminos());
             mapaSimulacion.generarGrafo();
+        }
+        
+        if (!mapaSimulacion.getGrafo().esConexo()){
+            JOptionPane.showMessageDialog(null,"El mapa del mundo ya no es conexo");
         }
         return nodosEliminados;
     }

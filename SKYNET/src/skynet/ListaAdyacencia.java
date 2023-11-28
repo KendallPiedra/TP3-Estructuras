@@ -35,9 +35,9 @@ public class ListaAdyacencia {//FALTA METODO DE ELIMINAR
         }
     } 
     
-    public void nuevaAdyacencia(Ciudad Origen,Ciudad destino){
+    public void nuevaAdyacencia(Ciudad origen,Ciudad destino){
         if (!esAdyacente(destino)){
-            Camino nodo = new Camino(destino);
+            Camino nodo = new Camino(origen,destino);
             insertar(nodo,destino);
         }
     } 

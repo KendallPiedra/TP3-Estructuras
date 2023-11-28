@@ -47,7 +47,7 @@ public class Main {
         }
         System.out.println("=================================================");        
         
-        mapa.convertirAGrafoDirigido();
+        
         System.out.println(mapa.grafo.esEuleriano());
         List<Ciudad> camino=mapa.grafo.obtenerCaminoEuleriano();
         for(Ciudad ciudad:camino){

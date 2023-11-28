@@ -9,8 +9,8 @@ import java.util.List;
  * @author Usuario
  */
 public class Skynet {
-    Mapa mapaReal;
-    Mapa mapaSimulacion;
+    public Mapa mapaReal;
+    public Mapa mapaSimulacion;
     
     public Skynet(Mapa _mapaReal){
         mapaSimulacion=new Mapa();
@@ -32,8 +32,12 @@ public class Skynet {
         mapaSimulacion.generarGrafoExpansionMinimaBienes();
         List<Camino> listaCaminos= mapaSimulacion.grafoExpansionMinima.extraerTodosLosCaminos();
         for(Camino camino: listaCaminos){
+<<<<<<< Updated upstream
             //System.out.println(camino.toString()+"---------------------");
             mapaSimulacion.grafo.eliminarCamino(camino);
+=======
+            mapaReal.grafo.eliminarCamino(camino);
+>>>>>>> Stashed changes
         }
     }
     

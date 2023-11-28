@@ -17,8 +17,12 @@ public class Main {
         // TODO code application logic here
         
         Mapa mapa=new Mapa();
+<<<<<<< Updated upstream
         //mapa.generarCiudades("Ciudades10E.json");
         mapa.generarCiudades("eule10.json");
+=======
+        mapa.generarCiudades("Ciudades6.json");
+>>>>>>> Stashed changes
         
         for(Ciudad ciudad:mapa.ciudades){
             System.out.println(ciudad.nombre);
@@ -30,7 +34,7 @@ public class Main {
         }
         mapa.generarGrafo();
 
-        
+        /*
         System.out.println("=================================================");
         System.out.println(mapa.grafo.toString());
 
@@ -54,25 +58,29 @@ public class Main {
         for(Ciudad ciudad:camino){
             System.out.print(ciudad.nombre+"->");
         }
-        /*
-        /*
+        
+        
         mapa.generarGrafoExpansionMinima();
         System.out.println("=================================================");
         System.out.println(mapa.grafoExpansionMinima.toString());
         System.out.println(mapa.grafo.esConexo());
-        
+        */
         Skynet SKINEY=new Skynet(mapa);
         System.out.println(SKINEY.mapaReal.grafo.toString());
-        //System.out.println("=================================================");
+        System.out.println("=================================================");
         //SKINEY.dividirAlMundo();
-        //SKINEY.bloquearArbolExpansionMinBienes();
         //System.out.println(SKINEY.mapaReal.grafo.toString());
-        //System.out.println("=================================================");
-        //System.out.println(SKINEY.mapaReal.grafoExpansionMinima.toString());
-
-
 
         
+        SKINEY.bloquearArbolExpansionMinBienes();
+        //System.out.println("=================================================");
+        System.out.println(SKINEY.mapaReal.grafoExpansionMinima.toString());
+        System.out.println("=================================================");
+        System.out.println(SKINEY.mapaReal.grafo.toString());
+
+
+
+        /*
         
         System.out.println("PRUEBAAAAAASSSSSSSSS");
         Mapa mapa2=new Mapa();

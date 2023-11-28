@@ -17,7 +17,7 @@ public class Main {
         // TODO code application logic here
         
         Mapa mapa=new Mapa();
-        mapa.generarCiudades("Ciudades6E.json");
+        mapa.generarCiudades("Ciudades6.json");
         
         for(Ciudad ciudad:mapa.ciudades){
             System.out.println(ciudad.nombre);
@@ -32,6 +32,19 @@ public class Main {
         
         System.out.println("=================================================");
         System.out.println(mapa.grafo.toString());
+
+        System.out.println("=================================================");        
+
+        System.out.println("=================================================");
+        
+        mapa.convertirAGrafoDirigido();
+        try {
+            // Pausa el programa durante 1 segundo (1000 milisegundos)
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            // Manejo de excepciones si ocurre algún problema durante la pausa
+            e.printStackTrace();
+        }
         System.out.println("=================================================");        
         
         mapa.convertirAGrafoDirigido();
@@ -58,7 +71,7 @@ public class Main {
 
 
 
-        */
+        
         
         System.out.println("PRUEBAAAAAASSSSSSSSS");
         Mapa mapa2=new Mapa();
@@ -66,6 +79,8 @@ public class Main {
         mapa2.generarGrafo();
         
         mapa2.convertirAGrafoDirigido(); 
+        
+        */
         
     }
 

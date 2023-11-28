@@ -336,10 +336,12 @@ public class Grafo {
         NodoGrafo temp=primero; 
         while(temp!=null){
             if(temp.lista.listaVacia()){
+                System.out.println(temp.dato.nombre);
                 temp.lista.nuevaAdyacencia(temp.dato, retornarCiudadConMenosCaminosDirigidosAConExcepcion(temp.dato).nodo.dato);
             }
             temp=temp.siguiente;
         }
+        System.out.println("TERMINO DE AÑADIR");
         System.out.println(toString());
     }
     

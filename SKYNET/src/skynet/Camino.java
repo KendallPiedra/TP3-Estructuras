@@ -33,7 +33,8 @@ public class Camino { //(ARCOS)
         visitado=false;
     }
     
-    public Camino(Ciudad destino){
+    public Camino(Ciudad origen, Ciudad destino){
+        this.origen= origen;
         this.destino= destino;
         ejercito=bienes=distancia=0;
         this.siguiente=null;

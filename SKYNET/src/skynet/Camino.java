@@ -18,9 +18,17 @@ public class Camino { //(ARCOS)
     
     
     
-    public Camino(Camino camino){
-        
+    public Camino(Camino camino) {
+        this.ciudad2 = camino.ciudad2;
+        this.origen = null;
+        this.destino = null;
+        this.ejercito = camino.ejercito;
+        this.bienes = camino.bienes;
+        this.distancia = camino.distancia;
+        this.visitado = camino.visitado;
+        siguiente=null;
     }
+    
     public Camino(String ciudad2, int ejercito, int bienes, int distancia) {
         this.ciudad2 = ciudad2;
         this.ejercito = ejercito;

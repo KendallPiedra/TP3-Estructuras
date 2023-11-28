@@ -41,9 +41,14 @@ public class Mapa {
     }
     
     public void CopiarMapa(Mapa mapa){
-        ciudades=mapa.getCiudades();
-        grafo=mapa.getGrafo();
-        grafoExpansionMinima=mapa.getGrafoExpansionMinima();
+        ciudades.clear();  // Limpiar la lista actual
+
+        for (Ciudad ciudad : mapa.ciudades) {
+            ciudades.add(new Ciudad(ciudad));
+        }
+        generarGrafo();
+        generarGrafoExpansionMinimaBienes();
+        
     }
 /*
     public List<Camino> getCaminos() {

@@ -35,8 +35,28 @@ public class Grafo {
     }
     
     
-    public void copiarGrafo(Grafo grafo){
-        
+    public void copiarGrafo(Grafo grafo) {
+        // Limpiar el grafo actual
+        primero = ultimo = null;
+
+        // Crear una copia de cada nodo y ciudad del grafo dado
+        if (!grafo.estaVacio()) {
+            NodoGrafo temporalGrafo = grafo.primero;
+            while (temporalGrafo != null) {
+                Ciudad ciudad = new Ciudad(temporalGrafo.dato);
+                NodoGrafo nodoCopia = new NodoGrafo(ciudad);
+
+                // Agregar el nodo copiado al nuevo grafo
+                if (estaVacio()) {
+                    primero = ultimo = nodoCopia;
+                } else {
+                    ultimo.siguiente = nodoCopia;
+                    ultimo = nodoCopia;
+                }
+
+                temporalGrafo = temporalGrafo.siguiente;
+            }
+        }
     }
     
     public void annadirNuevaArista(Ciudad origen, Ciudad destino, int ejercito, int bienes, int distancia){

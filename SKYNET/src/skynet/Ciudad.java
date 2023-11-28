@@ -24,18 +24,16 @@ public class Ciudad {
     
 
     public Ciudad(Ciudad ciudad) {
-        nombre = ciudad.nombre;
-        soldados = ciudad.soldados;
-        misiles = ciudad.misiles;
-        TEChLevel = ciudad.TEChLevel;
+        this.nombre = ciudad.nombre;
+        this.soldados = ciudad.soldados;
+        this.misiles = ciudad.misiles;
+        this.TEChLevel = ciudad.TEChLevel;
+        this.visitado = ciudad.visitado;
 
-        // Copiar la lista de caminos sin compartir referencias
-        if (ciudad.caminos != null) {
-            caminos = new ArrayList<>();
-            for (Camino camino : ciudad.caminos) {
-                Camino nuevoCamino = new Camino(camino);
-                caminos.add(nuevoCamino);
-            }
+        // Copiar la lista de caminos
+        this.caminos = new ArrayList<>();
+        for (Camino camino : ciudad.caminos) {
+            this.caminos.add(new Camino(camino.ciudad2, camino.ejercito,camino.getBienes(),camino.distancia));
         }
     }
     

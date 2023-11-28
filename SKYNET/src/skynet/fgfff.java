@@ -26,7 +26,7 @@ public class fgfff {
         System.out.println(SKINEY.mapaSimulacion.grafo.toString());
         System.out.println("====================================LINEA DIVISORA GRAAAAANDE===================================");
         System.out.println(SKINEY.generarRedDeUnSoloRecorrido());
-        //SKINEY.eliminarNodosMasVisitadosRecorrido();
+        SKINEY.eliminarNodosMasVisitadosRecorrido();
         System.out.println("===============LINEA DIVISORA===============");
         System.out.println(SKINEY.mapaSimulacion.grafo.toString());
         

@@ -74,7 +74,7 @@ public class Main {
         
         SKINEY.bloquearArbolExpansionMinBienes();
         //System.out.println("=================================================");
-        System.out.println(SKINEY.mapaReal.grafoExpansionMinima.toString());
+        System.out.println(SKINEY.mapaSimulacion.grafo.toString());
         System.out.println("=================================================");
         System.out.println(SKINEY.mapaReal.grafo.toString());
 

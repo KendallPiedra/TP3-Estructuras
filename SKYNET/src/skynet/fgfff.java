@@ -15,7 +15,7 @@ public class fgfff {
      */
     public static void main(String[] args) {
         Mapa mapa=new Mapa();
-        mapa.generarCiudades("Ciudades10.json");
+        mapa.generarCiudades("Ciudades6.json");
         //mapa.generarCiudades("eule10.json");
         
         mapa.generarGrafo();
@@ -25,10 +25,12 @@ public class fgfff {
         System.out.println("===============LINEA DIVISORA===============");
         System.out.println(SKINEY.mapaSimulacion.grafo.toString());
         System.out.println("====================================LINEA DIVISORA GRAAAAANDE===================================");
-        SKINEY.dividirAlMundo();
-        System.out.println(SKINEY.mapaReal.grafo.toString());
+        System.out.println(SKINEY.generarRedDeUnSoloRecorrido());
+        //SKINEY.eliminarNodosMasVisitadosRecorrido();
         System.out.println("===============LINEA DIVISORA===============");
         System.out.println(SKINEY.mapaSimulacion.grafo.toString());
+        
+
     }
     
 }
